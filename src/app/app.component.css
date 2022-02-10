@@ -1,4 +1,5 @@
 *{
+    /* font-family: Poppins; */
     font-family: sans-serif;
     box-sizing: border-box;
 }
@@ -13,6 +14,12 @@
     width: 75%;
     height: 120px;
     text-align: center;
+}
+#title{
+    margin-left: -55px;
+}
+#sub-title{
+    margin-left: -55px;
 }
 
                             /* Footer */

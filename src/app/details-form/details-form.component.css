@@ -1,11 +1,12 @@
 .details-container{
     display: flex;
-    justify-content: center;
+    justify-content:space-between;
     flex-wrap: wrap;
 }
 .cont-rows{
     width: 1000px;
     height: 900px;
+    margin-right: 50px;
     border-radius: 10px;
     box-shadow: 0 3px 10px rgb(0 0 0 / 0.8);
 }
@@ -13,3 +14,21 @@
     width: 300px;
     height: 30px;
 }
+.cont-navbar{
+    width: 250px;
+    height: 920px;
+    background: #1b2e51;
+    box-shadow: 0 3px 10px rgb(0 0 0 / 0.8);
+}
+.table1{
+    height: 65px;
+    font-family: sans-serif;
+    font-weight: 500;
+    color: white;
+  }
+  table tr td.table1:hover {
+    background:  #eee4d1;
+    color: black;
+    border: 10px;
+    font-weight: 500;
+  }

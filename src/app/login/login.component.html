@@ -22,11 +22,11 @@
     </div>
 
 
-    <div class="login-box-container pt-4">
+    <div class="login-box-container pt-5">
 
         <form class=" login-box pt-3" style="text-align: center;" [formGroup]="registerForm" (ngSubmit)="submitData()">
             <div class="login-logo">
-                <img src="assets/login-logo.svg" style="height: 60px; width: 60px;margin-top: -62px;">
+                <img src="assets/user.png" style="height: 70px; width: 70px;margin-top: -70px;">
             </div>
             <p style="font-size: 25px; font-weight: 600;">Login</p>
 
@@ -46,7 +46,8 @@
                 </div>
             </div>
 
-            <button class="btn btn-outline-primary mt-4" [disabled]="registerForm.invalid">Login</button>
+            <button class="btn btn-outline-primary mt-4" style=" border-radius: 14px;"
+                [disabled]="registerForm.invalid">Login</button>
         </form>
     </div>
 </div>
