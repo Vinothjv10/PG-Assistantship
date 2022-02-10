@@ -30,7 +30,6 @@ export class LoginComponent implements OnInit {
     if (this.registerForm.valid) {
       alert(`Logged Successfully`);
       this.registerForm.reset();
-      // this.router.navigate(['details']);
 
       this.SignedIn = true
     }
