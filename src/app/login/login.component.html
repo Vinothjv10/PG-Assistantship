@@ -30,7 +30,7 @@
             </div>
             <p style="font-size: 25px; font-weight: 600;">Login</p>
 
-            <div class="input-group mb-4 mt-4" style="margin-left: 50px;">
+            <div class="input-group mb-4 mt-4" id="login-input">
                 <input type="text" formControlName="email" class="form-control" placeholder="E-mail">
                 <div style="color: red;" *ngIf="email.invalid && (email.touched || email.dirty)">
                     <span class="error" *ngIf="email.errors?.required">*Email is Required.</span>
@@ -38,7 +38,7 @@
                 </div>
             </div>
 
-            <div class="input-group mb-3 mt-4" style="margin-left: 50px;">
+            <div class="input-group mb-3 mt-4" id="login-input">
                 <input type="password" formControlName="password" id="input-code" class="form-control"
                     placeholder="Password">
                 <div style="color: red;" *ngIf="password.invalid && (password.touched || password.dirty)">

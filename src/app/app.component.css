@@ -52,3 +52,19 @@
     font-size: 20px;
     margin-top: 10px;
 }
+
+@media(max-width: 568px)
+{
+    .head{
+        height: 250px;
+    }
+    #title{
+        margin-left: 0px;
+    }
+    #sub-title{
+        margin-left: 0px;
+    }
+    .head-02{
+        height: 230px;
+    }
+}

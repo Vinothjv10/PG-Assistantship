@@ -1,0 +1,16 @@
+{
+  "hosting": {
+    "public": "dist/pg-assistantship",
+    "ignore": [
+      "firebase.json",
+      "**/.*",
+      "**/node_modules/**"
+    ],
+    "rewrites": [
+      {
+        "source": "**",
+        "destination": "/index.html"
+      }
+    ]
+  }
+}
