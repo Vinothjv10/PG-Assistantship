@@ -53,7 +53,7 @@
     margin-top: 10px;
 }
 
-@media(max-width: 568px)
+@media(max-width: 900px)
 {
     .head{
         height: 250px;
