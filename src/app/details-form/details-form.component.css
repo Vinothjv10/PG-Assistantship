@@ -5,7 +5,7 @@
 }
 .cont-rows{
     width: 1200px;
-    height: 1050px;
+    height: 1400px;
     margin-right: 70px;
     border-radius: 10px;
     box-shadow: 0 3px 10px rgb(0 0 0 / 0.8);
@@ -16,7 +16,7 @@
 }
 .cont-navbar{
     width: 250px;
-    height: 1070px;
+    height: 1420px;
     margin-top: -15px;
     background: #37DCF2;
     box-shadow: 0 3px 10px rgb(0 0 0 / 0.8);
@@ -46,7 +46,7 @@
         display: none;
     }
     .cont-rows{
-        height: 1480px;
+        height: 1780px;
         margin-right: 0px;
     }
     #detail-name{
