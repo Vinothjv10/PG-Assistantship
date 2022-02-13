@@ -5,7 +5,9 @@
 }
 #head-01{
     width: 100%;
-    background: #1b2e51;
+    height: 150px;
+    /* background: #1b2e51; */
+    background: linear-gradient(to bottom,#599de0,#37DCF2);
     display: flex;
     justify-content: center;
     flex-wrap: wrap;
@@ -25,7 +27,7 @@
                             /* Footer */
 #head-02{
     width: 100%;
-    background: #1b2e51;
+    background: linear-gradient(to bottom,#599de0,#37DCF2);
     display: flex;
     justify-content: center;
     flex-wrap: wrap;

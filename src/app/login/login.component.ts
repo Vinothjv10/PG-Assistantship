@@ -19,7 +19,7 @@ export class LoginComponent implements OnInit {
     this.registerForm = new FormGroup({
 
       "email": new FormControl(null, [Validators.required, Validators.email]),
-      "password": new FormControl(null, [Validators.required, Validators.pattern('[a-zA-Z ]*')]),
+      "password": new FormControl(null, [Validators.required, Validators.pattern('[a-zA-Z ]*[0-9]*')]),
 
     });
   }

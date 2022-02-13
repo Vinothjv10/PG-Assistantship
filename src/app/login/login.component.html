@@ -31,7 +31,7 @@
             <p style="font-size: 25px; font-weight: 600;">Login</p>
 
             <div class="input-group mb-4 mt-4" id="login-input">
-                <input type="text" formControlName="email" class="form-control" placeholder="E-mail">
+                <input type="text" formControlName="email" class="form-control" placeholder="College code">
                 <div style="color: red;" *ngIf="email.invalid && (email.touched || email.dirty)">
                     <span class="error" *ngIf="email.errors?.required">*Email is Required.</span>
                     <span class="error" *ngIf="email.errors?.email">*Enter valid e-mail id.</span>
@@ -51,6 +51,7 @@
         </form>
     </div>
 </div>
+<router-outlet></router-outlet>
 
 
-<app-details-form *ngIf="SignedIn" (isLogout)="Logout()"></app-details-form>
+<app-college-name *ngIf="SignedIn" (isLogout)="Logout()"></app-college-name>

@@ -1,0 +1,20 @@
+.college-name{
+    font-size: 2.5rem;
+}
+#tab-1{
+    width: 200px;
+    font-size: 21px;
+    font-weight: bold;
+}
+#tab-2{
+    width: 200px;
+}
+#tab-3{
+    width: 200px;
+    font-size: 18px;
+}
+button:hover{
+    background: linear-gradient(to bottom,#599de0,#37DCF2);
+    color: aliceblue;
+    font-size: 16px;
+  }

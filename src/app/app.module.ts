@@ -7,12 +7,14 @@ import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { LoginComponent } from './login/login.component';
 import { DetailsFormComponent } from './details-form/details-form.component';
+import { CollegeNameComponent } from './college-name/college-name.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     LoginComponent,
     DetailsFormComponent,
+    CollegeNameComponent,
   ],
   imports: [
     BrowserAnimationsModule,

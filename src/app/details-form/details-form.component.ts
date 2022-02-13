@@ -11,5 +11,7 @@ export class DetailsFormComponent implements OnInit {
 
   ngOnInit(): void {
   }
+  submit() {
 
+  }
 }
