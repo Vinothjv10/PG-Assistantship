@@ -60,6 +60,9 @@
     .head{
         height: 250px;
     }
+    #head-01{
+        height: 400px;
+    }
     #title{
         margin-left: 0px;
     }

@@ -18,7 +18,7 @@ export class LoginComponent implements OnInit {
   ngOnInit(): void {
     this.registerForm = new FormGroup({
 
-      "email": new FormControl(null, [Validators.required, Validators.email]),
+      // "email": new FormControl(null, [Validators.required, Validators.email]),
       "password": new FormControl(null, [Validators.required, Validators.pattern('[a-zA-Z ]*[0-9]*')]),
 
     });
@@ -37,7 +37,7 @@ export class LoginComponent implements OnInit {
   }
 
   get password() { return this.registerForm.get('password'); }
-  get email() { return this.registerForm.get('email'); }
+  // get email() { return this.registerForm.get('email'); }
 
 
   Logout() {
