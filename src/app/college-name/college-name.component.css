@@ -4,15 +4,15 @@
     flex-wrap: wrap;
 }
 .cont-rows{
-    width: 1200px;
-    height: 650px;
+    width: 900px;
+    height: 750px;
     margin-right: 150px;
     border-radius: 10px;
     box-shadow: 0 3px 10px rgb(0 0 0 / 0.8);
 }
 .cont-navbar{
-    width: 250px;
-    height: 670px;
+    width: 200px;
+    height: 770px;
     margin-top: -15px;
     background: #37DCF2;
     box-shadow: 0 3px 10px rgb(0 0 0 / 0.8);

@@ -45,6 +45,7 @@ export class DetailsFormComponent implements OnInit {
 
     // display form values on success
     alert('SUCCESS!! :-)\n\n' + JSON.stringify(this.registerForm.value, null, 4));
+
   }
 
   onReset() {
