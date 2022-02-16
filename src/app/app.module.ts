@@ -8,6 +8,7 @@ import { AppComponent } from './app.component';
 import { LoginComponent } from './login/login.component';
 import { DetailsFormComponent } from './details-form/details-form.component';
 import { CollegeNameComponent } from './college-name/college-name.component';
+import { ViewFormComponent } from './view-form/view-form.component';
 
 @NgModule({
   declarations: [
@@ -15,6 +16,7 @@ import { CollegeNameComponent } from './college-name/college-name.component';
     LoginComponent,
     DetailsFormComponent,
     CollegeNameComponent,
+    ViewFormComponent,
   ],
   imports: [
     BrowserAnimationsModule,
