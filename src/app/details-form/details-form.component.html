@@ -1,4 +1,4 @@
-<div *ngIf="Last">
+<div *ngIf="!Last">
 
 
     <div class="details-container pt-3">
@@ -57,7 +57,7 @@
                             <td id="detail-gama" class="pt-3">:</td>
                             <td class="pt-3">
                                 <select style="max-width: 400px;" formControlName="year" class="form-control"
-                                    [ngClass]="{ 'is-invalid': submitted && f.year.errors }">
+                                    [(ngModel)]="value1" [ngClass]="{ 'is-invalid': submitted && f.year.errors }">
                                     <option value="">Choose...</option>
                                     <option value="I Year">I Year</option>
                                     <option value="II Year">II Year</option>
@@ -86,7 +86,8 @@
                             <td id="detail-gama" class="pt-3">:</td>
                             <td class="pt-3">
                                 <select class="form-control" style="max-width: 400px;" formControlName="branch"
-                                    class="form-control" [ngClass]="{ 'is-invalid': submitted && f.branch.errors }">
+                                    [(ngModel)]="value2" class="form-control"
+                                    [ngClass]="{ 'is-invalid': submitted && f.branch.errors }">
                                     <option value="">Choose...</option>
                                     <option value="M.E STRUCTURAL">M.E STRUCTURAL</option>
                                     <option value="M.E CAD">M.E CAD</option>
@@ -116,7 +117,7 @@
                             <td id="detail-name" class="pt-3">Communal Category in which the candidate was admitted</td>
                             <td id="detail-gama" class="pt-3">:</td>
                             <td class="pt-3">
-                                <select formControlName="communa_lCategory" class="form-control"
+                                <select formControlName="communa_lCategory" class="form-control" [(ngModel)]="value3"
                                     [ngClass]="{ 'is-invalid': submitted && f.communa_lCategory.errors }"
                                     style="max-width: 400px;">
                                     <option value="">Choose...</option>
@@ -139,7 +140,7 @@
                             <td id="detail-name" class="pt-3">Community of the Student Admitted</td>
                             <td id="detail-gama" class="pt-3">:</td>
                             <td class="pt-3">
-                                <select formControlName="community_Admitted" class="form-control"
+                                <select formControlName="community_Admitted" class="form-control" [(ngModel)]="value4"
                                     [ngClass]="{ 'is-invalid': submitted && f.community_Admitted.errors }"
                                     style="max-width: 400px;">
                                     <option value="">Choose...</option>
@@ -163,7 +164,7 @@
                             <td id="detail-name" class="pt-3">Entry Mode Whether</td>
                             <td id="detail-gama" class="pt-3">:</td>
                             <td class="pt-3">
-                                <select formControlName="entry_Mode" class="form-control"
+                                <select formControlName="entry_Mode" class="form-control" [(ngModel)]="value5"
                                     [ngClass]="{ 'is-invalid': submitted && f.entry_Mode.errors }"
                                     style="max-width: 400px;">
                                     <option value="">Choose...</option>
@@ -279,6 +280,7 @@
 </div>
 
 
-<app-view-form *ngIf="Last" name1={{course_name}} stud_name={{Name}} tancet={{Tancet}} gate={{Gate}}
+<app-view-form *ngIf="Last" Year_of_student={{value1}} name1={{course_name}} branch={{value2}} Stud_name={{Name}}
+    Communa_lCategory={{value3}} Community_Admitted={{value4}} Entry_Mode={{value5}} tancet={{Tancet}} gate={{Gate}}
     history_arrear={{History_arrea}} attendance={{Attendance}} account_no={{Account_no}} bank_name={{Bank_name}}
     ifsc_code={{Ifsc_code}}></app-view-form>

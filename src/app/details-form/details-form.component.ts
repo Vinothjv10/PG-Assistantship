@@ -8,7 +8,7 @@ import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 })
 export class DetailsFormComponent implements OnInit {
 
-  Last = true
+  Last = false
 
   registerForm: any = FormGroup;
   submitted = false;
@@ -22,7 +22,11 @@ export class DetailsFormComponent implements OnInit {
   Account_no: any;
   Bank_name: any;
   Ifsc_code: any;
-  // Gate: any;
+  value1: any;
+  value2: any;
+  value3: any;
+  value4: any;
+  value5: any;
 
   constructor(private formBuilder: FormBuilder) { }
 
@@ -60,7 +64,7 @@ export class DetailsFormComponent implements OnInit {
     alert('SUCCESS!! :-)\n\n' + JSON.stringify(this.registerForm.value, null, 4));
 
     // nxtpage() {
-    // this.Last = true
+    this.Last = true
     // }
 
   }
