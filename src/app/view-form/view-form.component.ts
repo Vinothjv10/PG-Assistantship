@@ -1,4 +1,4 @@
-import { Component, ElementRef, Input, OnInit, ViewChild } from '@angular/core';
+import { Component, Input, OnInit } from '@angular/core';
 import { jsPDF } from 'jspdf';
 
 @Component({
@@ -7,8 +7,6 @@ import { jsPDF } from 'jspdf';
   styleUrls: ['./view-form.component.css']
 })
 export class ViewFormComponent implements OnInit {
-
-  @ViewChild('pdfTable', { static: false }) pdfTable: ElementRef;
 
 
   @Input() name1: any;
