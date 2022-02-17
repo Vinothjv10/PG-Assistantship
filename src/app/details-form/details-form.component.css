@@ -50,7 +50,12 @@
         margin-right: 0px;
     }
     #detail-name{
-        width: 0px;
+        width: 80px;
+    }
+    #detail-gama{
+        padding-left: -30px;
+        width: 1px;
+        /* background: red; */
     }
     .btn{
         margin-left: 30px;
