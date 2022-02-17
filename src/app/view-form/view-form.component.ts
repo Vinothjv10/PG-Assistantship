@@ -1,4 +1,4 @@
-import { Component, Input, OnInit } from '@angular/core';
+import { Component, ElementRef, Input, OnInit, ViewChild } from '@angular/core';
 import { jsPDF } from 'jspdf';
 
 @Component({
@@ -8,6 +8,17 @@ import { jsPDF } from 'jspdf';
 })
 export class ViewFormComponent implements OnInit {
 
+  @ViewChild('content', { static: false }) el!: ElementRef;
+
+  printout() {
+    let pdf = new jsPDF('p', 'pt', 'a3');
+    pdf.html(this.el.nativeElement, {
+      callback: (pdf) => {
+        pdf.save("Details_File.pdf");
+      }
+    });
+    // pdf.save();
+  }
 
   @Input() name1: any;
   @Input() Stud_name: any;
@@ -29,7 +40,5 @@ export class ViewFormComponent implements OnInit {
 
   ngOnInit(): void {
   }
-  printout() {
 
-  }
 }
