@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { FormBuilder, FormGroup, Validators } from '@angular/forms';
+// import { HttpClient } from '@angular/common/http';
 
 @Component({
   selector: 'app-details-form',
@@ -7,6 +8,9 @@ import { FormBuilder, FormGroup, Validators } from '@angular/forms';
   styleUrls: ['./details-form.component.css']
 })
 export class DetailsFormComponent implements OnInit {
+
+  toggleStyle: boolean = false;
+
 
   Last = false
 
@@ -16,7 +20,7 @@ export class DetailsFormComponent implements OnInit {
   course_name: string = '';
   Name: any;
   Tancet: any;
-  Gate: any;
+  // Gate: any;
   History_arrea: any;
   Attendance: any;
   Account_no: any;
@@ -27,11 +31,17 @@ export class DetailsFormComponent implements OnInit {
   value3: any;
   value4: any;
   value5: any;
+  value8: any;
+  value9: any;
 
-  constructor(private formBuilder: FormBuilder) { }
+  constructor(
+    private formBuilder: FormBuilder,
+    // private http: HttpClient
+  ) { }
 
   ngOnInit(): void {
     this.registerForm = this.formBuilder.group({
+      college: ['', Validators.required],
       year: ['', Validators.required],
       courseName: ['', Validators.required],
       branch: ['', Validators.required],
@@ -40,7 +50,7 @@ export class DetailsFormComponent implements OnInit {
       community_Admitted: ['', Validators.required],
       entry_Mode: ['', Validators.required],
       tancet: ['', Validators.required],
-      gate: ['', Validators.required],
+      // gate: ['', Validators.required],
       history_Arrear: ['', Validators.required],
       attendance: ['', Validators.required],
       account_No: ['', Validators.required],
@@ -48,13 +58,17 @@ export class DetailsFormComponent implements OnInit {
       ifsc_code: ['', Validators.required],
 
     });
+    // this.registerForm.reset();
 
   }
+
   get f() { return this.registerForm.controls; }
 
   onSubmit() {
     this.submitted = true;
-
+    // this.http.post<any>('http://localhost:4000/user/signup', this.registerForm).subscribe(data => {
+    //   console.log(data);
+    // })
     // stop here if form is invalid
     if (this.registerForm.invalid) {
       return;
@@ -74,4 +88,7 @@ export class DetailsFormComponent implements OnInit {
     this.registerForm.reset();
   }
 
+  toggle() {
+    this.toggleStyle = !this.toggleStyle;
+  }
 }

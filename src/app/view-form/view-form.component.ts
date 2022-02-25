@@ -20,10 +20,11 @@ export class ViewFormComponent implements OnInit {
     // pdf.save();
   }
 
+  @Input() college: any;
   @Input() name1: any;
   @Input() Stud_name: any;
   @Input() tancet: any;
-  @Input() gate: any;
+  // @Input() gate: any;
   @Input() history_arrear: any;
   @Input() attendance: any;
   @Input() account_no: any;

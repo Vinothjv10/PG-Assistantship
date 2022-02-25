@@ -1,6 +1,9 @@
 <div *ngIf="!Next">
+    <div class="" style="height: 50px; width: 50px;">
+        <img src="./assets/menu.png" alt="" style="height: 50px; width: 50px;" (click)="toggle()">
+    </div>
     <div class="details-container pt-3">
-        <div class="cont-navbar">
+        <div *ngIf="toggleStyle" class="cont-navbar">
             <table>
                 <tr class="active">
                     <td class="table1">Notification 1

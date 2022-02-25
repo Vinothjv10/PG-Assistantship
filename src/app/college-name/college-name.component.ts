@@ -8,6 +8,9 @@ import { Router } from '@angular/router';
 })
 export class CollegeNameComponent implements OnInit {
 
+  toggleStyle: boolean = false;
+
+
   Next = false
 
   constructor(public router: Router) { }
@@ -19,6 +22,10 @@ export class CollegeNameComponent implements OnInit {
   }
   nxtpage() {
     this.Next = true
+  }
+
+  toggle() {
+    this.toggleStyle = !this.toggleStyle;
   }
 
 }

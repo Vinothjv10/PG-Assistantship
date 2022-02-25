@@ -1,8 +1,12 @@
 <div *ngIf="!Last">
 
+    <div class="" style="height: 50px; width: 50px;">
+        <img src="./assets/menu.png" alt="" style="height: 50px; width: 50px;" (click)="toggle()">
+    </div>
 
     <div class="details-container pt-3">
-        <div class="cont-navbar">
+
+        <div *ngIf="toggleStyle" class="cont-navbar">
             <table>
                 <tr class="active">
                     <td class="table1">Notification 1
@@ -52,7 +56,24 @@
                 <table class="table table-borderless" style="text-align: center;">
                     <tbody>
                         <tr>
-                            <td id=" detail-name" class="pt-3"> Year of Student
+                            <td id="detail-name" class="pt-3">College</td>
+                            <td id="detail-gama" class="pt-3">:</td>
+                            <td class="pt-3">
+                                <select formControlName="college" class="form-control" [(ngModel)]="value9"
+                                    [ngClass]="{ 'is-invalid': submitted && f.college.errors }"
+                                    style="max-width: 400px;">
+                                    <option value="">Choose...</option>
+                                    <option value="Government">Government</option>
+                                    <option value="University">University</option>
+                                    <option value="Affiliated">Affiliated</option>
+                                </select>
+                                <div *ngIf="submitted && f.college.errors" class="invalid-feedback">
+                                    <div *ngIf="f.college.errors.required"> College is required</div>
+                                </div>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td id=" detail-name" class="pt-3"> Year of Study
                             </td>
                             <td id="detail-gama" class="pt-3">:</td>
                             <td class="pt-3">
@@ -68,20 +89,27 @@
                             </td>
                         </tr>
                         <tr>
-                            <td id="detail-name" class="pt-3">Name of the course</td>
+                            <td id="detail-name" class="pt-3">Name of the Branch</td>
                             <td id="detail-gama" class="pt-3">:</td>
                             <td class="form-group pt-3">
-                                <input type="text" style="max-width: 400px;" formControlName="courseName"
-                                    [(ngModel)]="course_name" class="form-control"
-                                    [ngClass]="{ 'is-invalid': submitted && f.courseName.errors }"
-                                    placeholder="Name of the course">
+                                <select class="form-control" style="max-width: 400px;" formControlName="courseName"
+                                    [(ngModel)]="value8" class="form-control"
+                                    [ngClass]="{ 'is-invalid': submitted && f.courseName.errors }">
+                                    <option value="">Choose...</option>
+                                    <option value="Computer Science">Computer Science</option>
+                                    <option value="Electrical/Electronic Engineering">Electrical/Electronic Engineering
+                                    </option>
+                                    <option value="Mechanical Engineering">Mechanical Engineering</option>
+                                    <option value="Civil Engineering">Civil Engineering</option>
+
+                                </select>
                                 <div *ngIf="submitted && f.courseName.errors" class="invalid-feedback">
-                                    <div *ngIf="f.courseName.errors.required">Course Name is required</div>
+                                    <div *ngIf="f.courseName.errors.required">Branch is required</div>
                                 </div>
                             </td>
                         </tr>
                         <tr>
-                            <td id=" detail-name" class="pt-3">Name of the Branch
+                            <td id=" detail-name" class="pt-3">Name of the Course
                             </td>
                             <td id="detail-gama" class="pt-3">:</td>
                             <td class="pt-3">
@@ -97,7 +125,7 @@
                                     <option value="M.E COMMUNICATION SYSTEMS">M.E COMMUNICATION SYSTEMS</option>
                                 </select>
                                 <div *ngIf="submitted && f.branch.errors" class="invalid-feedback">
-                                    <div *ngIf="f.branch.errors.required">Branch is required</div>
+                                    <div *ngIf="f.branch.errors.required">Course Name is required</div>
                                 </div>
                             </td>
                         </tr>
@@ -114,7 +142,8 @@
                             </td>
                         </tr>
                         <tr>
-                            <td id="detail-name" class="pt-3">Communal Category in which the candidate was admitted</td>
+                            <td id="detail-name" class="pt-3">Name of the student in which the candidate was admitted
+                            </td>
                             <td id="detail-gama" class="pt-3">:</td>
                             <td class="pt-3">
                                 <select formControlName="communa_lCategory" class="form-control" [(ngModel)]="value3"
@@ -178,7 +207,7 @@
                             </td>
                         </tr>
                         <tr>
-                            <td id="detail-name" class="pt-3">Score Obtained</td>
+                            <td id="detail-name" class="pt-3">Score of Admission</td>
                             <td id="detail-gama" class="pt-3">:</td>
                             <td class="pt-3">
                                 <div class="form-group" style="max-width: 200px;">
@@ -190,14 +219,14 @@
                                         <div *ngIf="f.tancet.errors.required">Tancet is required</div>
                                     </div>
                                 </div>
-                                <div class="form-group mt-3" style="max-width: 200px;">
+                                <!-- <div class="form-group mt-3" style="max-width: 200px;">
                                     <label for="inputCity">GATE</label>
                                     <input type="number" formControlName="gate" class="form-control" [(ngModel)]="Gate"
                                         [ngClass]="{ 'is-invalid': submitted && f.gate.errors }" id="inputCity">
                                     <div *ngIf="submitted && f.gate.errors" class="invalid-feedback">
                                         <div *ngIf="f.gate.errors.required">Gate is required</div>
                                     </div>
-                                </div>
+                                </div> -->
                             </td>
                         </tr>
                         <tr>
@@ -280,7 +309,10 @@
 </div>
 
 
-<app-view-form *ngIf="Last" Year_of_student={{value1}} name1={{course_name}} branch={{value2}} Stud_name={{Name}}
-    Communa_lCategory={{value3}} Community_Admitted={{value4}} Entry_Mode={{value5}} tancet={{Tancet}} gate={{Gate}}
-    history_arrear={{History_arrea}} attendance={{Attendance}} account_no={{Account_no}} bank_name={{Bank_name}}
-    ifsc_code={{Ifsc_code}}></app-view-form>
+<app-view-form *ngIf="Last" college={{value9}} Year_of_student={{value1}} name1={{value8}} branch={{value2}}
+    Stud_name={{Name}} Communa_lCategory={{value3}} Community_Admitted={{value4}} Entry_Mode={{value5}}
+    tancet={{Tancet}} history_arrear={{History_arrea}} attendance={{Attendance}} account_no={{Account_no}}
+    bank_name={{Bank_name}} ifsc_code={{Ifsc_code}}></app-view-form>
+
+
+<!-- gate={{Gate}} -->
