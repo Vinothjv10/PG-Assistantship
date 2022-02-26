@@ -28,6 +28,7 @@ export class DetailsFormComponent implements OnInit {
   Tancet: any;
   // Gate: any;
   History_arrea: any;
+  History_arrea1: any;
   Attendance: any;
   Account_no: any;
   Bank_name: any;
@@ -55,9 +56,9 @@ export class DetailsFormComponent implements OnInit {
       communa_lCategory: ['', Validators.required],
       community_Admitted: ['', Validators.required],
       entry_Mode: ['', Validators.required],
-      tancet: ['', Validators.required],
+      // tancet: ['', Validators.required],
       // gate: ['', Validators.required],
-      history_Arrear: ['', Validators.required],
+      // history_Arrear: ['', Validators.required],
       attendance: ['', Validators.required],
       account_No: ['', Validators.required],
       bank_Name: ['', Validators.required],
