@@ -9,6 +9,12 @@ import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 })
 export class DetailsFormComponent implements OnInit {
 
+  marked = false;
+  theCheckbox = false;
+
+  mark = false;
+  Checkbox = false;
+
   toggleStyle: boolean = false;
 
 
@@ -90,5 +96,12 @@ export class DetailsFormComponent implements OnInit {
 
   toggle() {
     this.toggleStyle = !this.toggleStyle;
+  }
+
+  toggleVisibility() {
+    this.marked = !this.marked;
+  }
+  Attendace_toggle() {
+    this.mark = !this.mark;
   }
 }

@@ -1,6 +1,7 @@
 <div *ngIf="!Next">
-    <div class="" style="height: 50px; width: 50px;">
-        <img src="./assets/menu.png" alt="" style="height: 50px; width: 50px;" (click)="toggle()">
+    <div class="" style="height: 50px; width: 50px;" (click)="toggle()">
+        <img *ngIf="!toggleStyle" src="./assets/menu.png" alt="" style="height: 30px; width: 30px; margin-top: 10px;">
+        <img *ngIf="toggleStyle" src="./assets/cancel.png" alt="" style="height: 30px; width: 30px; margin-top: 10px;">
     </div>
     <div class="details-container pt-3">
         <div *ngIf="toggleStyle" class="cont-navbar">

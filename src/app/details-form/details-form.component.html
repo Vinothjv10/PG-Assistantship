@@ -1,7 +1,11 @@
+<link href="https://gitcdn.github.io/bootstrap-toggle/2.2.2/css/bootstrap-toggle.min.css" rel="stylesheet">
+<script src="https://gitcdn.github.io/bootstrap-toggle/2.2.2/js/bootstrap-toggle.min.js"></script>
+
 <div *ngIf="!Last">
 
-    <div class="" style="height: 50px; width: 50px;">
-        <img src="./assets/menu.png" alt="" style="height: 50px; width: 50px;" (click)="toggle()">
+    <div class="" style="height: 50px; width: 50px; cursor: pointer;" (click)="toggle()">
+        <img *ngIf="!toggleStyle" src="./assets/menu.png" alt="" style="height: 30px; width: 30px; margin-top: 10px;">
+        <img *ngIf="toggleStyle" src="./assets/cancel.png" alt="" style="height: 30px; width: 30px; margin-top: 10px;">
     </div>
 
     <div class="details-container pt-3">
@@ -210,6 +214,7 @@
                             <td id="detail-name" class="pt-3">Score of Admission</td>
                             <td id="detail-gama" class="pt-3">:</td>
                             <td class="pt-3">
+
                                 <div class="form-group" style="max-width: 200px;">
                                     <label for="inputCity">TANCET</label>
                                     <input type="number" formControlName="tancet" class="form-control"
@@ -234,12 +239,42 @@
                             </td>
                             <td id="detail-gama" class="pt-3">:</td>
                             <td class="pt-3">
-                                <input type="text" style="max-width: 400px;" formControlName="history_Arrear"
+                                <input type="text" style="max-width: 100px;" formControlName="history_Arrear"
+                                    placeholder="Yes / No" class="form-control" [(ngModel)]="History_arrea"
+                                    [ngClass]="{ 'is-invalid': submitted && f.history_Arrear.errors }">
+
+                                <div *ngIf="submitted && f.history_Arrear.errors" class="invalid-feedback">
+                                    <div *ngIf="f.history_Arrear.errors.required">History of Arrear is required</div>
+                                </div>
+                                <div class="mt-2" style="text-align: left;">
+                                    <span>If
+                                        Yes,</span>
+                                </div>
+                                <div class="form-check form-switch">
+
+                                    <input type="checkbox" [(ngModel)]="theCheckbox" class="form-check-input"
+                                        id="flexSwitchCheckDefault" data-md-icheck (change)="toggleVisibility()" />
+                                </div>
+                                <!-- Checkbox is <span>checked</span><span *ngIf="!marked">unchecked</span> -->
+                                <div *ngIf="marked" class="mt-3" style="max-width: 400px;">
+                                    <label class="mt-3" for="inputCity">Histroy of Arrear</label>
+
+                                    <select formControlName="history_Arrear" class="form-control" [(ngModel)]="value5">
+                                        <option value="">Choose...</option>
+                                        <option value="1">1</option>
+                                        <option value="2">2</option>
+                                        <option value="3">3</option>
+                                    </select>
+                                    <label class="mt-3" for="inputCity">Last Arrear clear date</label>
+                                    <input class="form-control" type="date" name="" id="">
+                                </div>
+
+                                <!-- <input type="text" style="max-width: 400px;" formControlName="history_Arrear"
                                     class="form-control" [(ngModel)]="History_arrea"
                                     [ngClass]="{ 'is-invalid': submitted && f.history_Arrear.errors }">
                                 <div *ngIf="submitted && f.history_Arrear.errors" class="invalid-feedback">
                                     <div *ngIf="f.history_Arrear.errors.required">History of Arrear is required</div>
-                                </div>
+                                </div> -->
                             </td>
                         </tr>
                         <tr>
@@ -248,12 +283,35 @@
                             </td>
                             <td id="detail-gama" class="pt-3">:</td>
                             <td class="pt-3">
-                                <input type="text" style="max-width: 400px;" formControlName="attendance"
+                                <input type="text" style="max-width: 100px;" formControlName="history_Arrear"
+                                    placeholder="Yes / No" class="form-control" [(ngModel)]="History_arrea"
+                                    [ngClass]="{ 'is-invalid': submitted && f.history_Arrear.errors }">
+
+                                <div *ngIf="submitted && f.history_Arrear.errors" class="invalid-feedback">
+                                    <div *ngIf="f.history_Arrear.errors.required">History of Arrear is required</div>
+                                </div>
+                                <div class="mt-2" style="text-align: left;">
+                                    <span>If
+                                        Yes,</span>
+                                </div>
+                                <div class="form-check form-switch">
+
+                                    <input type="checkbox" [(ngModel)]="Checkbox" class="form-check-input"
+                                        id="flexSwitchCheckDefault" data-md-icheck (change)="Attendace_toggle()" />
+                                </div>
+                                <!-- Checkbox is <span>checked</span><span *ngIf="!marked">unchecked</span> -->
+                                <div *ngIf="mark" class="mt-3" style="max-width: 400px;">
+                                    <textarea class="form-control" style="max-width: 400px; height: 50px;">
+                                    </textarea>
+
+                                </div>
+
+                                <!-- <input type="text" style="max-width: 400px;" formControlName="attendance"
                                     class="form-control" [(ngModel)]="Attendance"
                                     [ngClass]="{ 'is-invalid': submitted && f.attendance.errors }">
                                 <div *ngIf="submitted && f.attendance.errors" class="invalid-feedback">
                                     <div *ngIf="f.attendance.errors.required">Lack of Attendace is required</div>
-                                </div>
+                                </div> -->
                             </td>
                         </tr>
                         <tr>
