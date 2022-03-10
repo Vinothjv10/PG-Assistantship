@@ -33,6 +33,9 @@ p{
     font-size: 35px;
     font-weight: 1000;
 }
+.view_table{
+    display: none;
+}
 
 @media(max-width: 700px){
     .rows{
