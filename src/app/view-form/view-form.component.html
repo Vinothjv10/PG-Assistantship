@@ -1,7 +1,7 @@
 <div class="container">
     <div class="rows mt-4" style="text-align: center;">
         <p class="mt-1" style="font-size: 35px;">Students Details</p>
-        <div class="mt-3 " id="content" #content>
+        <!-- <div class="mt-3 " id="excel-table">
             <div class="">
 
             </div>
@@ -68,13 +68,6 @@
                     <input type="text" class="form-control" value="{{tancet}}" readonly>
                 </div>
             </div>
-            <!-- <div class="form-group row mt-1">
-                <label for="inputPassword" class="col-sm-4 col-form-label"> Gate Score :</label>
-                <br><br>
-                <div class="col-sm-6">
-                    <input type="text" class="form-control" value="{{gate}}" readonly>
-                </div>
-            </div> -->
             <div class="form-group row mt-1">
                 <label for="inputPassword" class="col-sm-4 col-form-label"> History of Arrears :</label>
                 <br><br>
@@ -86,7 +79,7 @@
                 <label for="inputPassword" class="col-sm-4 col-form-label"> Lack of Attendace :</label>
                 <br><br>
                 <div class="col-sm-6">
-                    <input type="text" class="form-control" value="{{attendance}}" readonly>
+                    <input type="text" class="form-control" value="{{lack_attentance}}" readonly>
                 </div>
             </div>
             <div class="form-group row mt-1">
@@ -110,7 +103,110 @@
                     <input type="text" class="form-control" value="{{ifsc_code}}" readonly>
                 </div>
             </div>
-        </div>
+        </div> -->
+        <table class="mt-3 " id="excel-table">
+            <div class="">
+
+            </div>
+            <tr class="form-group row mt-1">
+                <th for="inputPassword" class="col-sm-4 col-form-label">College :</th>
+                <br><br>
+                <td class="col-sm-6">
+                    <input type="text" class="form-control" value="{{college}}" readonly>
+                </td>
+            </tr>
+            <tr class="form-group row ">
+                <th for="inputPassword" class="col-sm-4 col-form-label">Year of Student :</th>
+                <br><br>
+                <td class="col-sm-6">
+                    <input type="text" class="form-control" value="{{Year_of_student}}" readonly>
+                </td>
+            </tr>
+            <tr class="form-group row mt-1">
+                <th for="inputPassword" class="col-sm-4 col-form-label">Name of the Course :</th>
+                <br><br>
+                <td class="col-sm-6">
+                    <input type="text" class="form-control" value="{{name1}}" readonly>
+                </td>
+            </tr>
+            <tr class="form-group row mt-1">
+                <th for="inputPassword" class="col-sm-4 col-form-label">Name of the Branch :</th>
+                <br><br>
+                <td class="col-sm-6">
+                    <input type="text" class="form-control" value="{{branch}}" readonly>
+                </td>
+            </tr>
+            <tr class="form-group row mt-1">
+                <th for="inputPassword" class="col-sm-4 col-form-label"> Student Name :</th>
+                <br><br>
+                <td class="col-sm-6">
+                    <input type="text" class="form-control" value="{{Stud_name}}" readonly>
+                </td>
+            </tr>
+            <tr class="form-group row mt-1">
+                <th for="inputPassword" class="col-sm-4 col-form-label">Communal Category :</th>
+                <br><br>
+                <td class="col-sm-6">
+                    <input type="text" class="form-control" value="{{Communa_lCategory}}" readonly>
+                </td>
+            </tr>
+            <tr class="form-group row mt-1">
+                <th for="inputPassword" class="col-sm-4 col-form-label"> Community Admitted :</th>
+                <br><br>
+                <td class="col-sm-6">
+                    <input type="text" class="form-control" value="{{Community_Admitted}}" readonly>
+                </td>
+            </tr>
+            <tr class="form-group row mt-1">
+                <th for="inputPassword" class="col-sm-4 col-form-label"> Entry Mode :</th>
+                <br><br>
+                <td class="col-sm-6">
+                    <input type="text" class="form-control" value="{{Entry_Mode}}" readonly>
+                </td>
+            </tr>
+            <tr class="form-group row mt-1">
+                <th for="inputPassword" class="col-sm-4 col-form-label"> Tancet Score :</th>
+                <br><br>
+                <td class="col-sm-6">
+                    <input type="text" class="form-control" value="{{tancet}}" readonly>
+                </td>
+            </tr>
+            <tr class="form-group row mt-1">
+                <th for="inputPassword" class="col-sm-4 col-form-label"> History of Arrears :</th>
+                <br><br>
+                <td class="col-sm-6">
+                    <input type="text" class="form-control" value="{{history_arrear}}" readonly>
+                </td>
+            </tr>
+            <tr class="form-group row mt-1">
+                <th for="inputPassword" class="col-sm-4 col-form-label"> Lack of Attendace :</th>
+                <br><br>
+                <td class="col-sm-6">
+                    <input type="text" class="form-control" value="{{lack_attentance}}" readonly>
+                </td>
+            </tr>
+            <tr class="form-group row mt-1">
+                <th for="inputPassword" class="col-sm-4 col-form-label"> Account No :</th>
+                <br><br>
+                <td class="col-sm-6">
+                    <input type="text" class="form-control" value="{{account_no}}" readonly>
+                </td>
+            </tr>
+            <tr class="form-group row mt-1">
+                <th for="inputPassword" class="col-sm-4 col-form-label"> Bank Name :</th>
+                <br><br>
+                <td class="col-sm-6">
+                    <input type="text" class="form-control" value="{{bank_name}}" readonly>
+                </td>
+            </tr>
+            <tr class="form-group row mt-1">
+                <th for="inputPassword" class="col-sm-4 col-form-label"> IFSC Code :</th>
+                <br><br>
+                <td class="col-sm-6">
+                    <input type="text" class="form-control" value="{{ifsc_code}}" readonly>
+                </td>
+            </tr>
+        </table>
         <button class="btn btn-outline-primary " (click)="printout()">Print</button>
     </div>
 </div>

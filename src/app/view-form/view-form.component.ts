@@ -1,5 +1,6 @@
 import { Component, ElementRef, Input, OnInit, ViewChild } from '@angular/core';
-import { jsPDF } from 'jspdf';
+import * as XLSX from 'xlsx';
+// import { jsPDF } from 'jspdf';
 
 @Component({
   selector: 'app-view-form',
@@ -8,17 +9,19 @@ import { jsPDF } from 'jspdf';
 })
 export class ViewFormComponent implements OnInit {
 
-  @ViewChild('content', { static: false }) el!: ElementRef;
+  fileName = 'ExcelSheet.xlsx';
 
-  printout() {
-    let pdf = new jsPDF('p', 'pt', 'a3');
-    pdf.html(this.el.nativeElement, {
-      callback: (pdf) => {
-        pdf.save("Details_File.pdf");
-      }
-    });
-    // pdf.save();
-  }
+  // @ViewChild('content', { static: false }) el!: ElementRef;
+
+  // printout() {
+  //   let pdf = new jsPDF('p', 'pt', 'a3');
+  //   pdf.html(this.el.nativeElement, {
+  //     callback: (pdf) => {
+  //       pdf.save("Details_File.xml");
+  //     }
+  //   });
+  //   // pdf.save();
+  // }
 
   @Input() college: any;
   @Input() name1: any;
@@ -35,11 +38,24 @@ export class ViewFormComponent implements OnInit {
   @Input() Communa_lCategory: any;
   @Input() Community_Admitted: any;
   @Input() Entry_Mode: any;
-
+  @Input() lack_attentance: any;
 
   constructor() { }
 
   ngOnInit(): void {
+  }
+
+  printout(): void {
+    /* pass here the table id */
+    let element = document.getElementById('excel-table');
+    const ws: XLSX.WorkSheet = XLSX.utils.table_to_sheet(element);
+
+    /* generate workbook and add the worksheet */
+    const wb: XLSX.WorkBook = XLSX.utils.book_new();
+    XLSX.utils.book_append_sheet(wb, ws, 'Sheet1');
+
+    /* save to file */
+    XLSX.writeFile(wb, this.fileName);
   }
 
 }

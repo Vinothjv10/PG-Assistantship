@@ -23,13 +23,13 @@ export class DetailsFormComponent implements OnInit {
   registerForm: any = FormGroup;
   submitted = false;
 
-  course_name: string = '';
+  // course_name: string = '';
   Name: any;
   Tancet: any;
   // Gate: any;
   History_arrea: any;
-  History_arrea1: any;
-  Attendance: any;
+  Lack_attentance: any;
+  // Attendance: any;
   Account_no: any;
   Bank_name: any;
   Ifsc_code: any;
@@ -38,8 +38,8 @@ export class DetailsFormComponent implements OnInit {
   value3: any;
   value4: any;
   value5: any;
-  value8: any;
-  value9: any;
+  value6: any;
+  value7: any;
 
   constructor(
     private formBuilder: FormBuilder,
@@ -56,10 +56,11 @@ export class DetailsFormComponent implements OnInit {
       communa_lCategory: ['', Validators.required],
       community_Admitted: ['', Validators.required],
       entry_Mode: ['', Validators.required],
-      // tancet: ['', Validators.required],
+      tancet: ['', Validators.required],
       // gate: ['', Validators.required],
-      // history_Arrear: ['', Validators.required],
-      attendance: ['', Validators.required],
+      history_Arrear: ['', Validators.required],
+      lack_attentance: ['', Validators.required],
+      // attendance: ['', Validators.required],
       account_No: ['', Validators.required],
       bank_Name: ['', Validators.required],
       ifsc_code: ['', Validators.required],

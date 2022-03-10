@@ -63,7 +63,7 @@
                             <td id="detail-name" class="pt-3">College</td>
                             <td id="detail-gama" class="pt-3">:</td>
                             <td class="pt-3">
-                                <select formControlName="college" class="form-control" [(ngModel)]="value9"
+                                <select formControlName="college" class="form-control" [(ngModel)]="value7"
                                     [ngClass]="{ 'is-invalid': submitted && f.college.errors }"
                                     style="max-width: 400px;">
                                     <option value="">Choose...</option>
@@ -97,7 +97,7 @@
                             <td id="detail-gama" class="pt-3">:</td>
                             <td class="form-group pt-3">
                                 <select class="form-control" style="max-width: 400px;" formControlName="courseName"
-                                    [(ngModel)]="value8" class="form-control"
+                                    [(ngModel)]="value6" class="form-control"
                                     [ngClass]="{ 'is-invalid': submitted && f.courseName.errors }">
                                     <option value="">Choose...</option>
                                     <option value="Computer Science">Computer Science</option>
@@ -240,7 +240,8 @@
                             <td id="detail-gama" class="pt-3">:</td>
                             <td class="pt-3">
                                 <input type="text" style="max-width: 100px;" formControlName="history_Arrear"
-                                    placeholder="Yes / No" class="form-control" [(ngModel)]="History_arrea"
+                                    id="input_y_n" placeholder="Yes / No" class="form-control"
+                                    [(ngModel)]="History_arrea"
                                     [ngClass]="{ 'is-invalid': submitted && f.history_Arrear.errors }">
 
                                 <div *ngIf="submitted && f.history_Arrear.errors" class="invalid-feedback">
@@ -283,12 +284,13 @@
                             </td>
                             <td id="detail-gama" class="pt-3">:</td>
                             <td class="pt-3">
-                                <input type="text" style="max-width: 100px;" formControlName="history_Arrear"
-                                    placeholder="Yes / No" class="form-control" [(ngModel)]="History_arrea1"
-                                    [ngClass]="{ 'is-invalid': submitted && f.history_Arrear.errors }">
+                                <input type="text" id="input_y_n" style="max-width: 100px;"
+                                    formControlName="lack_attentance" placeholder="Yes / No" class="form-control"
+                                    [(ngModel)]="Lack_attentance"
+                                    [ngClass]="{ 'is-invalid': submitted && f.lack_attentance.errors }">
 
-                                <div *ngIf="submitted && f.history_Arrear.errors" class="invalid-feedback">
-                                    <div *ngIf="f.history_Arrear.errors.required">History of Arrear is required</div>
+                                <div *ngIf="submitted && f.lack_attentance.errors" class="invalid-feedback">
+                                    <div *ngIf="f.lack_attentance.errors.required">Lack of Attendaceis required</div>
                                 </div>
                                 <div class="mt-2" style="text-align: left;">
                                     <span>If
@@ -367,10 +369,11 @@
 </div>
 
 
-<app-view-form *ngIf="Last" college={{value9}} Year_of_student={{value1}} name1={{value8}} branch={{value2}}
+<app-view-form *ngIf="Last" college={{value7}} Year_of_student={{value1}} name1={{value6}} branch={{value2}}
     Stud_name={{Name}} Communa_lCategory={{value3}} Community_Admitted={{value4}} Entry_Mode={{value5}}
-    tancet={{Tancet}} history_arrear={{History_arrea}} attendance={{Attendance}} account_no={{Account_no}}
+    tancet={{Tancet}} history_arrear={{History_arrea}} lack_attentance={{Lack_attentance}} account_no={{Account_no}}
     bank_name={{Bank_name}} ifsc_code={{Ifsc_code}}></app-view-form>
 
 
 <!-- gate={{Gate}} -->
+<!-- attendance={{Attendance}} -->
