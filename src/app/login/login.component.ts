@@ -40,7 +40,9 @@ export class LoginComponent implements OnInit {
     this.http.get<any>("http://localhost:3000/login")
       .subscribe(res => {
         const user = res.find((a: any) => {
-          return a.code === this.registerForm.value.code && a.password === this.registerForm.value.password
+          let value = a.code === this.registerForm.value.code && a.password === this.registerForm.value.password && console.log(a.college);
+
+          return a.code === this.registerForm.value.code && a.password === this.registerForm.value.password;
         });
         if (user) {
           alert("Logged Successfully");
