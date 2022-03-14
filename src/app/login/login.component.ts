@@ -14,6 +14,7 @@ export class LoginComponent implements OnInit {
 
   constructor(private router: Router, private http: HttpClient) { }
 
+  // me: any = [];
   registerForm: any;
 
   ngOnInit(): void {
@@ -40,17 +41,17 @@ export class LoginComponent implements OnInit {
     this.http.get<any>("http://localhost:3000/login")
       .subscribe(res => {
         const user = res.find((a: any) => {
-          let value = a.code === this.registerForm.value.code && a.password === this.registerForm.value.password && console.log(a.college);
-
-          return a.code === this.registerForm.value.code && a.password === this.registerForm.value.password;
+          // return a.code === this.registerForm.value.code && a.password === this.registerForm.value.password && console.log(a.college);
+          // console.log(value)
+          return a.code === this.registerForm.value.code && a.password === this.registerForm.value.password
         });
         if (user) {
-          alert("Logged Successfully");
+          alert("Logged Successfully ✌️");
           this.registerForm.reset();
           this.SignedIn = true
         }
         else {
-          alert("User Not Found");
+          alert("User Not Found 🤷‍♂️");
         }
       }, err => {
         alert("Something Went Wrong")

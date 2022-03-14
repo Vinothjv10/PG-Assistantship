@@ -40,6 +40,7 @@ export class DetailsFormComponent implements OnInit {
   value5: any;
   value6: any;
   value7: any;
+  value10: any
 
   constructor(
     private formBuilder: FormBuilder,
