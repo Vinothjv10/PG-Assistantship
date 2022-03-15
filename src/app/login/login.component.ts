@@ -10,7 +10,12 @@ import { Router } from '@angular/router';
 })
 export class LoginComponent implements OnInit {
 
-  SignedIn = false
+  SignedIn = false;
+  gct = false;
+  psg = false;
+
+
+  gcecode = "gce01";
 
   constructor(private router: Router, private http: HttpClient) { }
 
@@ -26,35 +31,49 @@ export class LoginComponent implements OnInit {
     });
   }
 
-  // submitData() {
-  //   console.log(this.registerForm.value);
-
-  //   if (this.registerForm.valid) {
-  //     alert(`Logged Successfully`);
-  //     this.registerForm.reset();
-
-  //     this.SignedIn = true
-  //   }
-
-  // }
   submitData() {
-    this.http.get<any>("http://localhost:3000/login")
+    this.http.get<any>("http://localhost:3000/gcesalem")
       .subscribe(res => {
         const user = res.find((a: any) => {
-          // return a.code === this.registerForm.value.code && a.password === this.registerForm.value.password && console.log(a.college);
-          // console.log(value)
+
           return a.code === this.registerForm.value.code && a.password === this.registerForm.value.password
         });
         if (user) {
           alert("Logged Successfully ✌️");
           this.registerForm.reset();
           this.SignedIn = true
+          // this.gct = true;
         }
-        else {
-          alert("User Not Found 🤷‍♂️");
+        // else {
+        //   alert("User Not Found 🤷‍♂️");
+        // }
+      })
+    // }, err => {
+    //   alert("Something Went Wrong")
+    // })
+    this.http.get<any>("http://localhost:3000/gct")
+      .subscribe(res => {
+        const user = res.find((a: any) => {
+          return a.code === this.registerForm.value.code && a.password === this.registerForm.value.password
+        });
+        if (user) {
+          alert("Logged Successfully ✌️");
+          this.registerForm.reset();
+          // this.SignedIn = true
+          this.gct = true;
         }
-      }, err => {
-        alert("Something Went Wrong")
+      })
+    this.http.get<any>("http://localhost:3000/psg")
+      .subscribe(res => {
+        const user = res.find((a: any) => {
+          return a.code === this.registerForm.value.code && a.password === this.registerForm.value.password
+        });
+        if (user) {
+          alert("Logged Successfully ✌️");
+          this.registerForm.reset();
+          // this.SignedIn = true
+          this.psg = true;
+        }
       })
   }
 

@@ -1,6 +1,6 @@
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 
-<div *ngIf="!SignedIn">
+<div *ngIf="!SignedIn && !gct && !psg">
 
     <div class="portal-container" style="width: 100%; text-align: center;">
         <p style=" font-size: 30px; color: green; font-weight: 600;">Online Post Graduate Assistantship and Non-Gate PG
@@ -55,5 +55,10 @@
 
 
 <app-college-name *ngIf="SignedIn" (isLogout)="Logout()"></app-college-name>
+
+<app-gct-clg *ngIf="gct"></app-gct-clg>
+
+<app-psg-clg *ngIf="psg"></app-psg-clg>
+
 
 <!-- *ngIf="SignedIn" -->

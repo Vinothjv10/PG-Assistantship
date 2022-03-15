@@ -10,6 +10,8 @@ import { LoginComponent } from './login/login.component';
 import { DetailsFormComponent } from './details-form/details-form.component';
 import { CollegeNameComponent } from './college-name/college-name.component';
 import { ViewFormComponent } from './view-form/view-form.component';
+import { GctClgComponent } from './gct-clg/gct-clg.component';
+import { PsgClgComponent } from './psg-clg/psg-clg.component';
 
 @NgModule({
   declarations: [
@@ -18,6 +20,8 @@ import { ViewFormComponent } from './view-form/view-form.component';
     DetailsFormComponent,
     CollegeNameComponent,
     ViewFormComponent,
+    GctClgComponent,
+    PsgClgComponent,
 
   ],
   imports: [
