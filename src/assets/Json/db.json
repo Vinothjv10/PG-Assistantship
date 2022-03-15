@@ -1,0 +1,26 @@
+{
+  "gcesalem": [
+    {
+      "code": "gce",
+      "password": "12345"
+    }
+  ],
+  "gct": [
+    {
+      "code": "gct",
+      "password": "12345"
+    }
+  ],
+  "psg": [
+    {
+      "code": "psg",
+      "password": "12345"
+    }
+  ],
+  "alagapa": [
+    {
+      "code": "alagapa",
+      "password": "12345"
+    }
+  ]
+}

@@ -13,6 +13,7 @@ export class LoginComponent implements OnInit {
   SignedIn = false;
   gct = false;
   psg = false;
+  alagapa = false;
 
 
   gcecode = "gce01";
@@ -36,7 +37,8 @@ export class LoginComponent implements OnInit {
       .subscribe(res => {
         const user = res.find((a: any) => {
 
-          return a.code === this.registerForm.value.code && a.password === this.registerForm.value.password
+          return a.code === this.registerForm.value.code && a.password === this.registerForm.value.password;
+
         });
         if (user) {
           alert("Logged Successfully ✌️");
@@ -71,8 +73,18 @@ export class LoginComponent implements OnInit {
         if (user) {
           alert("Logged Successfully ✌️");
           this.registerForm.reset();
-          // this.SignedIn = true
           this.psg = true;
+        }
+      })
+    this.http.get<any>("http://localhost:3000/alagapa")
+      .subscribe(res => {
+        const user = res.find((a: any) => {
+          return a.code === this.registerForm.value.code && a.password === this.registerForm.value.password
+        });
+        if (user) {
+          alert("Logged Successfully ✌️");
+          this.registerForm.reset();
+          this.alagapa = true;
         }
       })
   }

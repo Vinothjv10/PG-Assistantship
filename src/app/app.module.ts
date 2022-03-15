@@ -12,6 +12,7 @@ import { CollegeNameComponent } from './college-name/college-name.component';
 import { ViewFormComponent } from './view-form/view-form.component';
 import { GctClgComponent } from './gct-clg/gct-clg.component';
 import { PsgClgComponent } from './psg-clg/psg-clg.component';
+import { AlagapaComponent } from './colleges/alagapa/alagapa.component';
 
 @NgModule({
   declarations: [
@@ -22,6 +23,7 @@ import { PsgClgComponent } from './psg-clg/psg-clg.component';
     ViewFormComponent,
     GctClgComponent,
     PsgClgComponent,
+    AlagapaComponent,
 
   ],
   imports: [
