@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-mit-chennai',
@@ -7,9 +8,22 @@ import { Component, OnInit } from '@angular/core';
 })
 export class MitChennaiComponent implements OnInit {
 
-  constructor() { }
+  toggleStyle: boolean = false;
+  Next = false;
+
+  constructor(private router: Router) { }
 
   ngOnInit(): void {
+  }
+  details() {
+    this.router.navigate(['details']);
+  }
+  nxtpage() {
+    this.Next = true
+  }
+
+  toggle() {
+    this.toggleStyle = !this.toggleStyle;
   }
 
 }

@@ -10,7 +10,6 @@ export class GctCoimbatoreComponent implements OnInit {
 
   toggleStyle: boolean = false;
 
-
   Next = false
 
   constructor(private router: Router) { }

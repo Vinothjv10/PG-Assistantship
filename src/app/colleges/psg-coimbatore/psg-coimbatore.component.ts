@@ -9,9 +9,7 @@ import { Router } from '@angular/router';
 export class PsgCoimbatoreComponent implements OnInit {
 
   toggleStyle: boolean = false;
-
-
-  Next = false
+  Next = false;
 
   constructor(private router: Router) { }
 

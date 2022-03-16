@@ -10,6 +10,9 @@
     border-radius: 10px;
     box-shadow: 0 3px 10px rgb(0 0 0 / 0.8);
 }
+.contact_align{
+    margin-left: 50px;
+}
 .cont-navbar{
     width: 200px;
     height: 770px;

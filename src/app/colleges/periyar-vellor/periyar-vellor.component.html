@@ -1,1 +1,129 @@
-<p>periyar-vellor works!</p>
+<div *ngIf="!Next">
+    <div class="" style="height: 50px; width: 50px;" (click)="toggle()">
+        <img *ngIf="!toggleStyle" src="./assets/menu.png" alt="" style="height: 30px; width: 30px; margin-top: 10px;">
+        <img *ngIf="toggleStyle" src="./assets/cancel.png" alt="" style="height: 30px; width: 30px; margin-top: 10px;">
+    </div>
+    <div class="details-container pt-3">
+        <div *ngIf="toggleStyle" class="cont-navbar">
+            <table>
+                <tr class="active">
+                    <td class="table1">Notification 1
+                    </td>
+                </tr>
+                <tr>
+                    <td class="table1">Notification 2
+                    </td>
+                </tr>
+                <tr>
+                    <td class="table1">Notification 3
+                    </td>
+                </tr>
+                <tr>
+                    <td class="table1">Notification 4
+                    </td>
+                </tr>
+                <tr>
+                    <td class="table1">Notification 5
+                    </td>
+                </tr>
+                <tr>
+                    <td class="table1">Notification 6
+                    </td>
+                </tr>
+                <tr>
+                    <td class="table1">Notification 7
+                    </td>
+                </tr>
+                <tr>
+                    <td class="table1">Notification 8
+                    </td>
+                </tr>
+                <tr>
+                    <td class="table1">Notification 9
+                    </td>
+                </tr>
+                <tr>
+                    <td class="table1">Notification 10
+                    </td>
+                </tr>
+            </table>
+        </div>
+        <div class="cont-rows">
+            <div class="college" style="text-align: center;">
+                <div class="college-name">
+                    Government college of
+                    Technology, (Autonomous),
+                    Coimbatore
+                </div>
+            </div>
+            <br>
+            <br>
+
+            <div style="text-align: center;">
+                <table class=" table-borderless">
+                    <tbody>
+                        <tr>
+                            <td id="tab-1">Taluk</td>
+                            <td id="tab-2">:</td>
+                            <td id="tab-3">Omalur</td>
+                        </tr>
+                        <tr>
+                            <td id="tab-1">Constituency</td>
+                            <td id="tab-2">:</td>
+                            <td id="tab-3">SALEM WEST</td>
+                        </tr>
+                        <tr>
+                            <td id="tab-1">District</td>
+                            <td id="tab-2">:</td>
+                            <td id="tab-3">Salem</td>
+                        </tr>
+                        <tr>
+                            <td id="tab-1">Pincode</td>
+                            <td id="tab-2">:</td>
+                            <td id="tab-3">636011</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+            <br>
+            <br>
+            <h1 style="text-decoration: underline;">Contact :</h1>
+            <br>
+            <div class="college-cont" style="text-align: center;">
+                <table class=" table-borderless">
+                    <tbody>
+                        <tr>
+                            <td id="tab-1">Chairman</td>
+                            <td id="tab-2">:</td>
+                            <td id="tab-3"></td>
+                        </tr>
+                        <tr>
+                            <td id="tab-1">Principle Name</td>
+                            <td id="tab-2">:</td>
+                            <td id="tab-3">Dr.C.VASANTHANAYAKI (Phno : 9487564005)</td>
+                        </tr>
+                        <tr>
+                            <td id="tab-1">College Contact No</td>
+                            <td id="tab-2">:</td>
+                            <td id="tab-3">0427-2346157</td>
+                        </tr>
+
+                    </tbody>
+                </table>
+            </div>
+            <br>
+            <br>
+
+            <div class="college-btn" style="text-align: center;">
+
+                <button class="btn btn-outline-primary mt-4" style=" border-radius: 15px;width: 100px; height: 50px;"
+                    (click)="nxtpage()">
+                    Next
+                </button>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+<app-details-form *ngIf="Next"></app-details-form>

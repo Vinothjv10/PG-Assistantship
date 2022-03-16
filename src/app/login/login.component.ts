@@ -10,13 +10,18 @@ import { Router } from '@angular/router';
 })
 export class LoginComponent implements OnInit {
 
-  SignedIn = false;
-  gct = false;
-  psg = false;
+  act_chennai = false;
   alagapa = false;
+  anna_university_coimbatore = false;
+  anna_university_madurai = false;
+  anna_university_tirunelveli = false;
+
+  gce_salem = false;
+  gct_coimabatore = false;
+  psg_coimbatore = false;
 
 
-  gcecode = "gce01";
+  // gcecode = "gce01";
 
   constructor(private router: Router, private http: HttpClient) { }
 
@@ -43,7 +48,7 @@ export class LoginComponent implements OnInit {
         if (user) {
           alert("Logged Successfully ✌️");
           this.registerForm.reset();
-          this.SignedIn = true
+          this.gce_salem = true
           // this.gct = true;
         }
         // else {
@@ -62,7 +67,7 @@ export class LoginComponent implements OnInit {
           alert("Logged Successfully ✌️");
           this.registerForm.reset();
           // this.SignedIn = true
-          this.gct = true;
+          this.gct_coimabatore = true;
         }
       })
     this.http.get<any>("http://localhost:3000/psg")
@@ -73,7 +78,7 @@ export class LoginComponent implements OnInit {
         if (user) {
           alert("Logged Successfully ✌️");
           this.registerForm.reset();
-          this.psg = true;
+          this.psg_coimbatore = true;
         }
       })
     this.http.get<any>("http://localhost:3000/alagapa")
@@ -94,7 +99,7 @@ export class LoginComponent implements OnInit {
 
 
   Logout() {
-    this.SignedIn = false
+    this.gce_salem = false
     window.alert("Thank You");
 
   }
