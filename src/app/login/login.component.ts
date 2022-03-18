@@ -240,6 +240,163 @@ export class LoginComponent implements OnInit {
           this.thiagarajar_madurai = true;
         }
       })
+
+    this.http.get<any>("http://localhost:3000/university_ariyalur")
+      .subscribe(res => {
+        const user = res.find((a: any) => {
+          return a.code === this.registerForm.value.code && a.password === this.registerForm.value.password
+        });
+        if (user) {
+          alert("Logged Successfully ✌️");
+          this.registerForm.reset();
+          this.university_ariyalur = true;
+        }
+      })
+
+    this.http.get<any>("http://localhost:3000/university_dindigul")
+      .subscribe(res => {
+        const user = res.find((a: any) => {
+          return a.code === this.registerForm.value.code && a.password === this.registerForm.value.password
+        });
+        if (user) {
+          alert("Logged Successfully ✌️");
+          this.registerForm.reset();
+          this.university_dindigul = true;
+        }
+      })
+
+    this.http.get<any>("http://localhost:3000/university_kanchepuram")
+      .subscribe(res => {
+        const user = res.find((a: any) => {
+          return a.code === this.registerForm.value.code && a.password === this.registerForm.value.password
+        });
+        if (user) {
+          alert("Logged Successfully ✌️");
+          this.registerForm.reset();
+          this.university_kanchepuram = true;
+        }
+      })
+
+    this.http.get<any>("http://localhost:3000/university_nagercoil")
+      .subscribe(res => {
+        const user = res.find((a: any) => {
+          return a.code === this.registerForm.value.code && a.password === this.registerForm.value.password
+        });
+        if (user) {
+          alert("Logged Successfully ✌️");
+          this.registerForm.reset();
+          this.university_nagercoil = true;
+        }
+      })
+
+    this.http.get<any>("http://localhost:3000/university_panruti")
+      .subscribe(res => {
+        const user = res.find((a: any) => {
+          return a.code === this.registerForm.value.code && a.password === this.registerForm.value.password
+        });
+        if (user) {
+          alert("Logged Successfully ✌️");
+          this.registerForm.reset();
+          this.university_panruti = true;
+        }
+      })
+
+    this.http.get<any>("http://localhost:3000/university_pattukodai")
+      .subscribe(res => {
+        const user = res.find((a: any) => {
+          return a.code === this.registerForm.value.code && a.password === this.registerForm.value.password
+        });
+        if (user) {
+          alert("Logged Successfully ✌️");
+          this.registerForm.reset();
+          this.university_pattukodai = true;
+        }
+      })
+
+    this.http.get<any>("http://localhost:3000/university_ramanathapuram")
+      .subscribe(res => {
+        const user = res.find((a: any) => {
+          return a.code === this.registerForm.value.code && a.password === this.registerForm.value.password
+        });
+        if (user) {
+          alert("Logged Successfully ✌️");
+          this.registerForm.reset();
+          this.university_ramanathapuram = true;
+        }
+      })
+
+    this.http.get<any>("http://localhost:3000/university_thindivanam")
+      .subscribe(res => {
+        const user = res.find((a: any) => {
+          return a.code === this.registerForm.value.code && a.password === this.registerForm.value.password
+        });
+        if (user) {
+          alert("Logged Successfully ✌️");
+          this.registerForm.reset();
+          this.university_thindivanam = true;
+        }
+      })
+
+    this.http.get<any>("http://localhost:3000/university_thiruchirappali")
+      .subscribe(res => {
+        const user = res.find((a: any) => {
+          return a.code === this.registerForm.value.code && a.password === this.registerForm.value.password
+        });
+        if (user) {
+          alert("Logged Successfully ✌️");
+          this.registerForm.reset();
+          this.university_thiruchirappali = true;
+        }
+      })
+
+    this.http.get<any>("http://localhost:3000/university_thirukkuvalai")
+      .subscribe(res => {
+        const user = res.find((a: any) => {
+          return a.code === this.registerForm.value.code && a.password === this.registerForm.value.password
+        });
+        if (user) {
+          alert("Logged Successfully ✌️");
+          this.registerForm.reset();
+          this.university_thirukkuvalai = true;
+        }
+      })
+
+    this.http.get<any>("http://localhost:3000/university_thiruvannamalai")
+      .subscribe(res => {
+        const user = res.find((a: any) => {
+          return a.code === this.registerForm.value.code && a.password === this.registerForm.value.password
+        });
+        if (user) {
+          alert("Logged Successfully ✌️");
+          this.registerForm.reset();
+          this.university_thiruvannamalai = true;
+        }
+      })
+
+    this.http.get<any>("http://localhost:3000/university_thoothukudi")
+      .subscribe(res => {
+        const user = res.find((a: any) => {
+          return a.code === this.registerForm.value.code && a.password === this.registerForm.value.password
+        });
+        if (user) {
+          alert("Logged Successfully ✌️");
+          this.registerForm.reset();
+          this.university_thoothukudi = true;
+        }
+      })
+
+    this.http.get<any>("http://localhost:3000/university_villupuram")
+      .subscribe(res => {
+        const user = res.find((a: any) => {
+          return a.code === this.registerForm.value.code && a.password === this.registerForm.value.password
+        });
+        if (user) {
+          alert("Logged Successfully ✌️");
+          this.registerForm.reset();
+          this.university_villupuram = true;
+        }
+      })
+
   }
 
   get password() { return this.registerForm.get('password'); }
