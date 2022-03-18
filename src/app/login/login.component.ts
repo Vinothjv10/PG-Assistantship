@@ -15,10 +15,17 @@ export class LoginComponent implements OnInit {
   anna_university_coimbatore = false;
   anna_university_madurai = false;
   anna_university_tirunelveli = false;
-
+  ceg_guindy = false;
+  cit_coimbatore = false;
+  gce_bargur = false;
+  gce_erode = false;
   gce_salem = false;
+  gce_thirunelveli = false;
   gct_coimabatore = false;
+  mit_chennai = false;
+  periyar_vellor = false;
   psg_coimbatore = false;
+  thiagarajar_madurai = false;
 
 
   // gcecode = "gce01";
@@ -38,7 +45,7 @@ export class LoginComponent implements OnInit {
   }
 
   submitData() {
-    this.http.get<any>("http://localhost:3000/gcesalem")
+    this.http.get<any>("http://localhost:3000/act_chennai")
       .subscribe(res => {
         const user = res.find((a: any) => {
 
@@ -48,7 +55,7 @@ export class LoginComponent implements OnInit {
         if (user) {
           alert("Logged Successfully ✌️");
           this.registerForm.reset();
-          this.gce_salem = true
+          this.act_chennai = true
           // this.gct = true;
         }
         // else {
@@ -58,7 +65,18 @@ export class LoginComponent implements OnInit {
     // }, err => {
     //   alert("Something Went Wrong")
     // })
-    this.http.get<any>("http://localhost:3000/gct")
+    this.http.get<any>("http://localhost:3000/alagapa")
+      .subscribe(res => {
+        const user = res.find((a: any) => {
+          return a.code === this.registerForm.value.code && a.password === this.registerForm.value.password
+        });
+        if (user) {
+          alert("Logged Successfully ✌️");
+          this.registerForm.reset();
+          this.alagapa = true;
+        }
+      })
+    this.http.get<any>("http://localhost:3000/anna_university_coimbatore")
       .subscribe(res => {
         const user = res.find((a: any) => {
           return a.code === this.registerForm.value.code && a.password === this.registerForm.value.password
@@ -67,10 +85,131 @@ export class LoginComponent implements OnInit {
           alert("Logged Successfully ✌️");
           this.registerForm.reset();
           // this.SignedIn = true
+          this.anna_university_coimbatore = true;
+        }
+      })
+    this.http.get<any>("http://localhost:3000/anna_university_madurai")
+      .subscribe(res => {
+        const user = res.find((a: any) => {
+          return a.code === this.registerForm.value.code && a.password === this.registerForm.value.password
+        });
+        if (user) {
+          alert("Logged Successfully ✌️");
+          this.registerForm.reset();
+          this.anna_university_madurai = true;
+        }
+      })
+    this.http.get<any>("http://localhost:3000/anna_university_tirunelveli")
+      .subscribe(res => {
+        const user = res.find((a: any) => {
+          return a.code === this.registerForm.value.code && a.password === this.registerForm.value.password
+        });
+        if (user) {
+          alert("Logged Successfully ✌️");
+          this.registerForm.reset();
+          this.anna_university_tirunelveli = true;
+        }
+      })
+    this.http.get<any>("http://localhost:3000/ceg_guindy")
+      .subscribe(res => {
+        const user = res.find((a: any) => {
+          return a.code === this.registerForm.value.code && a.password === this.registerForm.value.password
+        });
+        if (user) {
+          alert("Logged Successfully ✌️");
+          this.registerForm.reset();
+          this.ceg_guindy = true;
+        }
+      })
+    this.http.get<any>("http://localhost:3000/cit_coimbatore")
+      .subscribe(res => {
+        const user = res.find((a: any) => {
+          return a.code === this.registerForm.value.code && a.password === this.registerForm.value.password
+        });
+        if (user) {
+          alert("Logged Successfully ✌️");
+          this.registerForm.reset();
+          this.cit_coimbatore = true;
+        }
+      })
+    this.http.get<any>("http://localhost:3000/gce_bargur")
+      .subscribe(res => {
+        const user = res.find((a: any) => {
+          return a.code === this.registerForm.value.code && a.password === this.registerForm.value.password
+        });
+        if (user) {
+          alert("Logged Successfully ✌️");
+          this.registerForm.reset();
+          this.gce_bargur = true;
+        }
+      })
+    this.http.get<any>("http://localhost:3000/gce_erode")
+      .subscribe(res => {
+        const user = res.find((a: any) => {
+          return a.code === this.registerForm.value.code && a.password === this.registerForm.value.password
+        });
+        if (user) {
+          alert("Logged Successfully ✌️");
+          this.registerForm.reset();
+          this.gce_erode = true;
+        }
+      })
+    this.http.get<any>("http://localhost:3000/gce_salem")
+      .subscribe(res => {
+        const user = res.find((a: any) => {
+          return a.code === this.registerForm.value.code && a.password === this.registerForm.value.password
+        });
+        if (user) {
+          alert("Logged Successfully ✌️");
+          this.registerForm.reset();
+          this.gce_salem = true;
+        }
+      })
+    this.http.get<any>("http://localhost:3000/gce_tirunelveli")
+      .subscribe(res => {
+        const user = res.find((a: any) => {
+          return a.code === this.registerForm.value.code && a.password === this.registerForm.value.password
+        });
+        if (user) {
+          alert("Logged Successfully ✌️");
+          this.registerForm.reset();
+          this.gce_thirunelveli = true;
+        }
+      })
+    this.http.get<any>("http://localhost:3000/gct_coimbatore")
+      .subscribe(res => {
+        const user = res.find((a: any) => {
+          return a.code === this.registerForm.value.code && a.password === this.registerForm.value.password
+        });
+        if (user) {
+          alert("Logged Successfully ✌️");
+          this.registerForm.reset();
           this.gct_coimabatore = true;
         }
       })
-    this.http.get<any>("http://localhost:3000/psg")
+    this.http.get<any>("http://localhost:3000/mit_chennai")
+      .subscribe(res => {
+        const user = res.find((a: any) => {
+          return a.code === this.registerForm.value.code && a.password === this.registerForm.value.password
+        });
+        if (user) {
+          alert("Logged Successfully ✌️");
+          this.registerForm.reset();
+          this.mit_chennai = true;
+        }
+      })
+    this.http.get<any>("http://localhost:3000/periyar_vellor")
+      .subscribe(res => {
+        const user = res.find((a: any) => {
+          return a.code === this.registerForm.value.code && a.password === this.registerForm.value.password
+        });
+        if (user) {
+          alert("Logged Successfully ✌️");
+          this.registerForm.reset();
+          this.periyar_vellor = true;
+        }
+      })
+    this.http.get<any>("http://localhost:3000/psg_coimbatore")
       .subscribe(res => {
         const user = res.find((a: any) => {
           return a.code === this.registerForm.value.code && a.password === this.registerForm.value.password
@@ -81,7 +220,7 @@ export class LoginComponent implements OnInit {
           this.psg_coimbatore = true;
         }
       })
-    this.http.get<any>("http://localhost:3000/alagapa")
+    this.http.get<any>("http://localhost:3000/thiagarajar_madurai")
       .subscribe(res => {
         const user = res.find((a: any) => {
           return a.code === this.registerForm.value.code && a.password === this.registerForm.value.password
@@ -89,7 +228,7 @@ export class LoginComponent implements OnInit {
         if (user) {
           alert("Logged Successfully ✌️");
           this.registerForm.reset();
-          this.alagapa = true;
+          this.thiagarajar_madurai = true;
         }
       })
   }

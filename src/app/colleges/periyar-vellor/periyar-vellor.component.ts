@@ -25,5 +25,4 @@ export class PeriyarVellorComponent implements OnInit {
   toggle() {
     this.toggleStyle = !this.toggleStyle;
   }
-
 }

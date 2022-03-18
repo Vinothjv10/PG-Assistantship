@@ -37,6 +37,7 @@ import { PsgCoimbatoreComponent } from './colleges/psg-coimbatore/psg-coimbatore
 import { ThiagarajarMaduraiComponent } from './colleges/thiagarajar-madurai/thiagarajar-madurai.component';
 import { GctCoimbatoreComponent } from './colleges/gct-coimbatore/gct-coimbatore.component';
 import { GceSalemComponent } from './colleges/gce-salem/gce-salem.component';
+import { PeriyarVellorComponent } from './colleges/periyar-vellor/periyar-vellor.component';
 
 @NgModule({
   declarations: [
@@ -71,7 +72,8 @@ import { GceSalemComponent } from './colleges/gce-salem/gce-salem.component';
     PsgCoimbatoreComponent,
     ThiagarajarMaduraiComponent,
     GctCoimbatoreComponent,
-    GceSalemComponent
+    GceSalemComponent,
+    PeriyarVellorComponent
 
   ],
   imports: [
