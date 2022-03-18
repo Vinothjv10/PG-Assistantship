@@ -26,13 +26,22 @@ export class LoginComponent implements OnInit {
   periyar_vellor = false;
   psg_coimbatore = false;
   thiagarajar_madurai = false;
-
-
-  // gcecode = "gce01";
+  university_ariyalur = false;
+  university_dindigul = false;
+  university_kanchepuram = false;
+  university_nagercoil = false;
+  university_panruti = false;
+  university_pattukodai = false;
+  university_ramanathapuram = false;
+  university_thindivanam = false;
+  university_thiruchirappali = false;
+  university_thirukkuvalai = false;
+  university_thiruvannamalai = false;
+  university_thoothukudi = false;
+  university_villupuram = false;
 
   constructor(private router: Router, private http: HttpClient) { }
 
-  // me: any = [];
   registerForm: any;
 
   ngOnInit(): void {
