@@ -23,7 +23,7 @@
     </div>
 
 
-    <div class="login-box-container pt-5">
+    <div *ngIf="forgot_password" class="login-box-container pt-5">
 
         <form class=" login-box pt-3" style="text-align: center;" [formGroup]="registerForm" (ngSubmit)="submitData()">
             <div class="login-logo">
@@ -48,11 +48,18 @@
             </div>
 
             <button class="btn btn-outline-primary mt-4" style=" border-radius: 14px;"
-                [disabled]="registerForm.invalid">Login</button>
+                [disabled]="registerForm.invalid">Login
+            </button>
+
+            <div (click)="forgot()"> Forgot password </div>
+
         </form>
+
     </div>
+    <app-forgot-password *ngIf="forgot_password_1"></app-forgot-password>
+
 </div>
-<router-outlet></router-outlet>
+<!-- <router-outlet></router-outlet> -->
 
 <app-act-chennai *ngIf="act_chennai"></app-act-chennai>
 

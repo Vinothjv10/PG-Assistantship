@@ -10,6 +10,9 @@ import { Router } from '@angular/router';
 })
 export class LoginComponent implements OnInit {
 
+  forgot_password = true;
+  forgot_password_1 = false;
+
   act_chennai = false;
   alagapa = false;
   anna_university_coimbatore = false;
@@ -406,6 +409,11 @@ export class LoginComponent implements OnInit {
   Logout() {
     this.gce_salem = false
     window.alert("Thank You");
+  }
+
+  forgot() {
+    this.forgot_password = false;
+    this.forgot_password_1 = true;
 
   }
 

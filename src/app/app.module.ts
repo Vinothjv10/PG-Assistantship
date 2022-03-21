@@ -38,6 +38,7 @@ import { ThiagarajarMaduraiComponent } from './colleges/thiagarajar-madurai/thia
 import { GctCoimbatoreComponent } from './colleges/gct-coimbatore/gct-coimbatore.component';
 import { GceSalemComponent } from './colleges/gce-salem/gce-salem.component';
 import { PeriyarVellorComponent } from './colleges/periyar-vellor/periyar-vellor.component';
+import { ForgotPasswordComponent } from './forgot-password/forgot-password.component';
 
 @NgModule({
   declarations: [
@@ -73,7 +74,8 @@ import { PeriyarVellorComponent } from './colleges/periyar-vellor/periyar-vellor
     ThiagarajarMaduraiComponent,
     GctCoimbatoreComponent,
     GceSalemComponent,
-    PeriyarVellorComponent
+    PeriyarVellorComponent,
+    ForgotPasswordComponent
 
   ],
   imports: [
