@@ -82,12 +82,14 @@ export class DetailsFormComponent implements OnInit {
     if (this.registerForm.invalid) {
       return;
     }
+    console.log(this.registerForm.value);
 
     // display form values on success
     // alert('SUCCESS!! :-)\n\n' + JSON.stringify(this.registerForm.value, null, 4));
     alert('🔥 SUCCESS!! ´◡` 🔥');
     // nxtpage() {
-    this.Last = true
+
+    this.Last = true;
     // }
 
   }
