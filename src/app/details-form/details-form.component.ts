@@ -40,7 +40,7 @@ export class DetailsFormComponent implements OnInit {
   value5: any;
   value6: any;
   value7: any;
-  value10: any
+  // value10: any
 
   constructor(
     private formBuilder: FormBuilder,
@@ -67,8 +67,6 @@ export class DetailsFormComponent implements OnInit {
       ifsc_code: ['', Validators.required],
 
     });
-    // this.registerForm.reset();
-
   }
 
   get f() { return this.registerForm.controls; }

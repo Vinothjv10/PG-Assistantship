@@ -39,6 +39,7 @@ import { GctCoimbatoreComponent } from './colleges/gct-coimbatore/gct-coimbatore
 import { GceSalemComponent } from './colleges/gce-salem/gce-salem.component';
 import { PeriyarVellorComponent } from './colleges/periyar-vellor/periyar-vellor.component';
 import { ForgotPasswordComponent } from './forgot-password/forgot-password.component';
+import { SidebarComponent } from './sidebar/sidebar.component';
 
 @NgModule({
   declarations: [
@@ -75,7 +76,8 @@ import { ForgotPasswordComponent } from './forgot-password/forgot-password.compo
     GctCoimbatoreComponent,
     GceSalemComponent,
     PeriyarVellorComponent,
-    ForgotPasswordComponent
+    ForgotPasswordComponent,
+    SidebarComponent
 
   ],
   imports: [

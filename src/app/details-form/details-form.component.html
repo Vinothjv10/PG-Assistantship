@@ -55,10 +55,23 @@
             </table>
         </div>
 
+
         <div class="cont-rows">
             <form [formGroup]="registerForm" (ngSubmit)="onSubmit()">
                 <table class="table table-borderless" style="text-align: center;">
                     <tbody>
+                        <tr>
+                            <td id="detail-name" class="pt-3">Academic Year</td>
+                            <td id="detail-gama" class="pt-3">:</td>
+                            <td class="pt-3">
+                                <input type="text" style="max-width: 400px;" formControlName="Name" class="form-control"
+                                    [(ngModel)]="Name" [ngClass]="{ 'is-invalid': submitted && f.Name.errors }"
+                                    placeholder="Enter Academic Year">
+                                <div *ngIf="submitted && f.Name.errors" class="invalid-feedback">
+                                    <div *ngIf="f.Name.errors.required">Name is required</div>
+                                </div>
+                            </td>
+                        </tr>
                         <tr>
                             <td id="detail-name" class="pt-3">College</td>
                             <td id="detail-gama" class="pt-3">:</td>
@@ -97,8 +110,7 @@
                             <td id="detail-gama" class="pt-3">:</td>
                             <td class="form-group pt-3">
                                 <select class="form-control" style="max-width: 400px;" formControlName="courseName"
-                                    [(ngModel)]="value6" class="form-control"
-                                    [ngClass]="{ 'is-invalid': submitted && f.courseName.errors }">
+                                    [(ngModel)]="value6" [ngClass]="{ 'is-invalid': submitted && f.courseName.errors }">
                                     <option value="">Choose...</option>
                                     <option value="Computer Science">Computer Science</option>
                                     <option value="Electrical/Electronic Engineering">Electrical/Electronic Engineering
@@ -118,8 +130,7 @@
                             <td id="detail-gama" class="pt-3">:</td>
                             <td class="pt-3">
                                 <select class="form-control" style="max-width: 400px;" formControlName="branch"
-                                    [(ngModel)]="value2" class="form-control"
-                                    [ngClass]="{ 'is-invalid': submitted && f.branch.errors }">
+                                    [(ngModel)]="value2" [ngClass]="{ 'is-invalid': submitted && f.branch.errors }">
                                     <option value="">Choose...</option>
                                     <option value="M.E Applied Electronics">M.E Applied Electronics</option>
                                     <option value="M.E COMMUNICATION SYSTEMS">M.E Communicaton Systems</option>
@@ -207,7 +218,7 @@
                             </td>
                         </tr>
                         <tr>
-                            <td id="detail-name" class="pt-3">Community category of the student</td>
+                            <td id="detail-name" class="pt-3">Community of the student</td>
                             <td id="detail-gama" class="pt-3">:</td>
                             <td class="pt-3">
                                 <select formControlName="community_Admitted" class="form-control" [(ngModel)]="value4"
@@ -277,8 +288,7 @@
                             <td id="detail-gama" class="pt-3">:</td>
                             <td class="pt-3">
                                 <input type="text" style="max-width: 100px;" formControlName="history_Arrear"
-                                    id="input_y_n" placeholder="Yes / No" class="form-control"
-                                    [(ngModel)]="History_arrea"
+                                    placeholder="Yes / No" class="form-control input_y_n" [(ngModel)]="History_arrea"
                                     [ngClass]="{ 'is-invalid': submitted && f.history_Arrear.errors }">
 
                                 <div *ngIf="submitted && f.history_Arrear.errors" class="invalid-feedback">
@@ -297,8 +307,9 @@
                                 <div *ngIf="marked" class="mt-3" style="max-width: 400px;">
                                     <label class="mt-3" for="inputCity">Histroy of Arrear</label>
 
-                                    <select formControlName="history_Arrear_2" class="form-control"
-                                        [(ngModel)]="value10">
+
+                                    <!-- formControlName="history_Arrear_2"  [(ngModel)]="value10"  -->
+                                    <select class="form-control">
                                         <option value="">Choose...</option>
                                         <option value="1">1</option>
                                         <option value="2">2</option>
@@ -322,9 +333,8 @@
                             </td>
                             <td id="detail-gama" class="pt-3">:</td>
                             <td class="pt-3">
-                                <input type="text" id="input_y_n" style="max-width: 100px;"
-                                    formControlName="lack_attentance" placeholder="Yes / No" class="form-control"
-                                    [(ngModel)]="Lack_attentance"
+                                <input type="text" style="max-width: 100px;" formControlName="lack_attentance"
+                                    placeholder="Yes / No" class="form-control input_y_n" [(ngModel)]="Lack_attentance"
                                     [ngClass]="{ 'is-invalid': submitted && f.lack_attentance.errors }">
 
                                 <div *ngIf="submitted && f.lack_attentance.errors" class="invalid-feedback">
@@ -352,6 +362,40 @@
                                 <div *ngIf="submitted && f.attendance.errors" class="invalid-feedback">
                                     <div *ngIf="f.attendance.errors.required">Lack of Attendace is required</div>
                                 </div> -->
+                            </td>
+                        </tr>
+                        <tr>
+                            <td id="detail-name" class="pt-3">First Year</td>
+                            <td id="detail-gama" class="pt-3">:</td>
+                            <td class="pt-3">
+                                <label class="mt-3" style="text-align: left; width: 400px;" for="inputCity">Date of
+                                    Admission</label>
+                                <input class="form-control" style="max-width: 400px;" type="date" name="" id="">
+                            </td>
+                        </tr>
+                        <tr>
+                            <td id="detail-name" class="pt-3">Last Year</td>
+                            <td id="detail-gama" class="pt-3">:</td>
+                            <td class="pt-3">
+                                <label class="mt-3" style="text-align: left; width: 400px;" for="inputCity">Last Working
+                                    Date</label>
+                                <input class="form-control" style="max-width: 400px;" type="date" name="" id="">
+                            </td>
+                        </tr>
+                        <tr>
+                            <td id="detail-name" class="pt-3">Work Load</td>
+                            <td id="detail-gama" class="pt-3">:</td>
+                            <td class="pt-3">
+                                <div class="form-check form-check-inline" style="text-align: left; width: 200px ;">
+                                    <input class="form-check-input " type="checkbox" id="inlineCheckbox1"
+                                        value="option1">
+                                    <label class="form-check-label" for="inlineCheckbox1">Assigned</label>
+                                </div>
+                                <div class="form-check form-check-inline" style="text-align: left; width: 200px ;">
+                                    <input class="form-check-input" type="checkbox" id="inlineCheckbox2"
+                                        value="option2">
+                                    <label class="form-check-label" for="inlineCheckbox2">Not</label>
+                                </div>
                             </td>
                         </tr>
                         <tr>
@@ -390,6 +434,20 @@
                                 </div>
                             </td>
                         </tr>
+                        <tr>
+                            <td id="detail-name" class="pt-3">Contact Number</td>
+                            <td id="detail-gama" class="pt-3">:</td>
+                            <td class="form-group pt-3">
+                                <input type="text" class="form-control" style="max-width: 400px;">
+                            </td>
+                        </tr>
+                        <tr>
+                            <td id="detail-name" class="pt-3">Email Id</td>
+                            <td id="detail-gama" class="pt-3">:</td>
+                            <td class="form-group pt-3">
+                                <input type="email" class="form-control" style="max-width: 400px;">
+                            </td>
+                        </tr>
                         <br>
                         <tr>
                             <td id="detail-name" class="pt-2"></td>
@@ -397,8 +455,8 @@
                                 <button class="btn btn-primary mr-1">Submit</button>
                                 <button class="btn btn-secondary" type="reset" (click)="onReset()">Reset</button>
                             </td>
-
                         </tr>
+
                     </tbody>
                 </table>
             </form>
