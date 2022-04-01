@@ -9,7 +9,7 @@ import { Router } from '@angular/router';
 export class GceSalemComponent implements OnInit {
 
   toggleStyle: boolean = false;
-
+  title = "Government college of Engineering and Technology, (Autonomous), Salem-636011";
 
   Next = false
 

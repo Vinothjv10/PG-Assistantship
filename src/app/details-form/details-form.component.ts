@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, Input, OnInit } from '@angular/core';
 import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 // import { HttpClient } from '@angular/common/http';
 
@@ -8,6 +8,8 @@ import { FormBuilder, FormGroup, Validators } from '@angular/forms';
   styleUrls: ['./details-form.component.css']
 })
 export class DetailsFormComponent implements OnInit {
+
+  @Input() titles: any
 
   marked = false;
   theCheckbox = false;
@@ -45,28 +47,29 @@ export class DetailsFormComponent implements OnInit {
   constructor(
     private formBuilder: FormBuilder,
     // private http: HttpClient
-  ) { }
+  ) {
+    // this.value7 = this.titles;
+  }
 
   ngOnInit(): void {
-    this.registerForm = this.formBuilder.group({
-      college: ['', Validators.required],
-      year: ['', Validators.required],
-      courseName: ['', Validators.required],
-      branch: ['', Validators.required],
-      Name: ['', Validators.required],
-      communa_lCategory: ['', Validators.required],
-      community_Admitted: ['', Validators.required],
-      entry_Mode: ['', Validators.required],
-      tancet: ['', Validators.required],
-      // gate: ['', Validators.required],
-      history_Arrear: ['', Validators.required],
-      lack_attentance: ['', Validators.required],
-      // attendance: ['', Validators.required],
-      account_No: ['', Validators.required],
-      bank_Name: ['', Validators.required],
-      ifsc_code: ['', Validators.required],
-
-    });
+    // this.registerForm = this.formBuilder.group({
+    //   college: ['', Validators.required],
+    //   year: ['', Validators.required],
+    //   courseName: ['', Validators.required],
+    //   branch: ['', Validators.required],
+    //   Name: ['', Validators.required],
+    //   communa_lCategory: ['', Validators.required],
+    //   community_Admitted: ['', Validators.required],
+    //   entry_Mode: ['', Validators.required],
+    //   tancet: ['', Validators.required],
+    //   // gate: ['', Validators.required],
+    //   history_Arrear: ['', Validators.required],
+    //   lack_attentance: ['', Validators.required],
+    //   // attendance: ['', Validators.required],
+    //   account_No: ['', Validators.required],
+    //   bank_Name: ['', Validators.required],
+    //   ifsc_code: ['', Validators.required],
+    // });
   }
 
   get f() { return this.registerForm.controls; }
