@@ -1,37 +1,35 @@
 import { Component, Input, OnInit } from '@angular/core';
-import { FormBuilder, FormGroup, Validators } from '@angular/forms';
+import { FormBuilder, FormControl, FormGroup, Validators } from '@angular/forms';
 // import { HttpClient } from '@angular/common/http';
+
+
 
 @Component({
   selector: 'app-details-form',
   templateUrl: './details-form.component.html',
   styleUrls: ['./details-form.component.css']
 })
+
+
 export class DetailsFormComponent implements OnInit {
+  // Show Options
+  current_sem1 = false
+  history_of_arrear = false
 
   @Input() titles: any
 
-  marked = false;
-  theCheckbox = false;
-
-  mark = false;
-  Checkbox = false;
 
   toggleStyle: boolean = false;
 
 
   Last = false
 
-  registerForm: any = FormGroup;
   submitted = false;
 
-  // course_name: string = '';
   Name: any;
   Tancet: any;
-  // Gate: any;
   History_arrea: any;
   Lack_attentance: any;
-  // Attendance: any;
   Account_no: any;
   Bank_name: any;
   Ifsc_code: any;
@@ -42,17 +40,87 @@ export class DetailsFormComponent implements OnInit {
   value5: any;
   value6: any;
   value7: any;
-  // value10: any
+  formBuilder: any;
 
   constructor(
-    private formBuilder: FormBuilder,
-    // private http: HttpClient
   ) {
-    // this.value7 = this.titles;
   }
+  registerForm: any;
 
   ngOnInit(): void {
-    // this.registerForm = this.formBuilder.group({
+    this.registerForm = new FormGroup({
+      "name": new FormControl(null, [Validators.required, Validators.pattern('[a-zA-Z ]*')]),
+
+    });
+  }
+  get name() { return this.registerForm.get('name'); }
+  // get f() { return this.registerForm.controls; }
+
+  onSubmit() {
+    this.submitted = true;
+
+    // if (this.registerForm.invalid) {
+    //   return;
+    // }
+    // console.log(this.registerForm.value);
+
+    // display form values on success
+    // alert('SUCCESS!! :-)\n\n' + JSON.stringify(this.registerForm.value, null, 4));
+    alert('🔥 SUCCESS!! ´◡` 🔥');
+    // nxtpage() {
+
+    this.Last = true;
+    // }
+  }
+
+
+  historyofarrear(evt: any) {
+    var target = evt.target;
+    if (target.value == "Yes") {
+      this.history_of_arrear = true
+      // console.log(target.value)
+    }
+    else if (target.value == "No") {
+      this.history_of_arrear = false
+    }
+  }
+
+  semester(e: any) {
+    if (e.target.value == "sem1") {
+      this.current_sem1 = false
+      this.history_of_arrear = false
+
+      console.log("yes")
+    }
+    else if (e.target.value == "sem2") {
+      this.current_sem1 = true
+      console.log("no")
+    }
+    else if (e.target.value == "sem3") {
+      this.current_sem1 = true
+      console.log("no")
+    }
+    else if (e.target.value == "sem4") {
+      this.current_sem1 = true
+      console.log("no")
+    }
+  }
+
+
+
+  onReset() {
+    this.submitted = false;
+    this.registerForm.reset();
+  }
+
+  toggle() {
+    this.toggleStyle = !this.toggleStyle;
+  }
+
+}
+
+
+ // this.registerForm = this.formBuilder.group({
     //   college: ['', Validators.required],
     //   year: ['', Validators.required],
     //   courseName: ['', Validators.required],
@@ -70,44 +138,3 @@ export class DetailsFormComponent implements OnInit {
     //   bank_Name: ['', Validators.required],
     //   ifsc_code: ['', Validators.required],
     // });
-  }
-
-  get f() { return this.registerForm.controls; }
-
-  onSubmit() {
-    this.submitted = true;
-    // this.http.post<any>('http://localhost:4000/user/signup', this.registerForm).subscribe(data => {
-    //   console.log(data);
-    // })
-    // stop here if form is invalid
-    if (this.registerForm.invalid) {
-      return;
-    }
-    console.log(this.registerForm.value);
-
-    // display form values on success
-    // alert('SUCCESS!! :-)\n\n' + JSON.stringify(this.registerForm.value, null, 4));
-    alert('🔥 SUCCESS!! ´◡` 🔥');
-    // nxtpage() {
-
-    this.Last = true;
-    // }
-
-  }
-
-  onReset() {
-    this.submitted = false;
-    this.registerForm.reset();
-  }
-
-  toggle() {
-    this.toggleStyle = !this.toggleStyle;
-  }
-
-  toggleVisibility() {
-    this.marked = !this.marked;
-  }
-  Attendace_toggle() {
-    this.mark = !this.mark;
-  }
-}
