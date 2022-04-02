@@ -15,6 +15,7 @@ export class DetailsFormComponent implements OnInit {
   // Show Options
   current_sem1 = false
   history_of_arrear = false
+  lackattendance = false
 
   @Input() titles: any
 
@@ -40,28 +41,35 @@ export class DetailsFormComponent implements OnInit {
   value5: any;
   value6: any;
   value7: any;
-  formBuilder: any;
+  // formBuilder: any;
 
   constructor(
+    private formBuilder: FormBuilder
   ) {
   }
-  registerForm: any;
+  registerForm: any = FormGroup;
 
   ngOnInit(): void {
-    this.registerForm = new FormGroup({
-      "name": new FormControl(null, [Validators.required, Validators.pattern('[a-zA-Z ]*')]),
+    this.registerForm = this.formBuilder.group({
+      academic: ['', Validators.required],
+      year: ['', Validators.required],
+      branch: ['', Validators.required],
+      course: ['', Validators.required],
+      community_admitted: ['', Validators.required],
+      community_student: ['', Validators.required],
+      mode: ['', Validators.required],
 
     });
   }
-  get name() { return this.registerForm.get('name'); }
+  get f() { return this.registerForm.controls; }
   // get f() { return this.registerForm.controls; }
 
   onSubmit() {
     this.submitted = true;
 
-    // if (this.registerForm.invalid) {
-    //   return;
-    // }
+    if (this.registerForm.invalid) {
+      return;
+    }
     // console.log(this.registerForm.value);
 
     // display form values on success
@@ -94,19 +102,23 @@ export class DetailsFormComponent implements OnInit {
     }
     else if (e.target.value == "sem2") {
       this.current_sem1 = true
-      console.log("no")
     }
     else if (e.target.value == "sem3") {
       this.current_sem1 = true
-      console.log("no")
     }
     else if (e.target.value == "sem4") {
       this.current_sem1 = true
-      console.log("no")
     }
   }
 
-
+  lackofattendance(g: any) {
+    if (g.target.value == "Yes") {
+      this.lackattendance = true
+    }
+    else if (g.target.value == "No") {
+      this.lackattendance = false
+    }
+  }
 
   onReset() {
     this.submitted = false;
@@ -118,23 +130,3 @@ export class DetailsFormComponent implements OnInit {
   }
 
 }
-
-
- // this.registerForm = this.formBuilder.group({
-    //   college: ['', Validators.required],
-    //   year: ['', Validators.required],
-    //   courseName: ['', Validators.required],
-    //   branch: ['', Validators.required],
-    //   Name: ['', Validators.required],
-    //   communa_lCategory: ['', Validators.required],
-    //   community_Admitted: ['', Validators.required],
-    //   entry_Mode: ['', Validators.required],
-    //   tancet: ['', Validators.required],
-    //   // gate: ['', Validators.required],
-    //   history_Arrear: ['', Validators.required],
-    //   lack_attentance: ['', Validators.required],
-    //   // attendance: ['', Validators.required],
-    //   account_No: ['', Validators.required],
-    //   bank_Name: ['', Validators.required],
-    //   ifsc_code: ['', Validators.required],
-    // });
