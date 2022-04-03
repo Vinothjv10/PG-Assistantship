@@ -69,7 +69,7 @@ export class DetailsFormComponent implements OnInit {
 
       arrear: [''],
       attendance: [''],
-      remarks: ['']
+      remark: ['']
     });
   }
   get f() { return this.registerForm.controls; }
@@ -86,8 +86,8 @@ export class DetailsFormComponent implements OnInit {
     // alert('SUCCESS!! :-)\n\n' + JSON.stringify(this.registerForm.value, null, 4));
     alert('🔥 SUCCESS!! ´◡` 🔥');
     // nxtpage() {
-
-    this.Last = true;
+    this.registerForm.reset();
+    this.Last = false;
     // }
   }
 

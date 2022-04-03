@@ -18,7 +18,8 @@
 
         <div class="cont-rows">
             <form [formGroup]="registerForm" (ngSubmit)="onSubmit()">
-                <table class="table table-borderless" style="text-align: center;">
+                <div class="d-flex justify-content-center h3">{{titles}}</div>
+                <table class="table table-borderless mt-3" style="text-align: center;">
                     <tbody>
                         <tr>
                             <td id="detail-name" class="pt-3">Academic Year</td>
@@ -27,8 +28,8 @@
                                 <select class="form-control" formControlName="academic" style="max-width: 400px;"
                                     [ngClass]="{ 'is-invalid': submitted && f.academic.errors }">
                                     <option value="">Choose...</option>
-                                    <option value="1">2021-2022</option>
-                                    <option value="2">2022-2023</option>
+                                    <option value="2021-2022">2021-2022</option>
+                                    <option value="2022-2023">2022-2023</option>
                                 </select>
                                 <div *ngIf="submitted && f.academic.errors" class="invalid-feedback">
                                     <div *ngIf="f.academic.errors.required">Academic is required</div>
