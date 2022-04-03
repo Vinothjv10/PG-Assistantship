@@ -53,12 +53,19 @@ export class DetailsFormComponent implements OnInit {
     this.registerForm = this.formBuilder.group({
       academic: ['', Validators.required],
       year: ['', Validators.required],
+      semester: ['', Validators.required],
       branch: ['', Validators.required],
       course: ['', Validators.required],
+      name: [null, [Validators.required, Validators.pattern('[a-zA-Z ]*')]],
       community_admitted: ['', Validators.required],
       community_student: ['', Validators.required],
       mode: ['', Validators.required],
-
+      score: ['', [Validators.required, Validators.pattern('[0-9]*')]],
+      account: [null, [Validators.required, Validators.pattern('[0-9]*')]],
+      bank: [null, [Validators.required, Validators.pattern('[a-zA-Z ]*')]],
+      ifsc: ['', Validators.required],
+      phonenumber: [null, [Validators.required, Validators.pattern('[0-9]*')]],
+      email: [null, [Validators.required, Validators.email]],
     });
   }
   get f() { return this.registerForm.controls; }
