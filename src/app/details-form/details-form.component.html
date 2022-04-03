@@ -168,7 +168,8 @@
                             <td id="detail-name" class="pt-3">Community of the student</td>
                             <td id="detail-gama" class="pt-3">:</td>
                             <td class="pt-3">
-                                <select class="form-control" formArrayName="community_student" style="max-width: 400px;"
+                                <select class="form-control" formControlName="community_student"
+                                    style="max-width: 400px;"
                                     [ngClass]="{ 'is-invalid': submitted && f.community_student.errors }">
                                     <option value="">Choose...</option>
                                     <option value="OC">OC</option>
@@ -227,20 +228,20 @@
                             <td class="pt-3">
                                 <div class="inputs" style="max-width: 200px;">
                                     <div class="form-check form-check-inline">
-                                        <input class="form-check-input" type="radio" name="attendanceradio" value="Yes"
-                                            (change)="historyofarrear($event)">
+                                        <input class="form-check-input" type="radio" formControlName="arrear"
+                                            name="arrear" value="Yes" (change)="historyofarrear($event)">
                                         <label class="form-check-label">Yes</label>
                                     </div>
                                     <div class="form-check form-check-inline">
-                                        <input class="form-check-input" type="radio" name="attendanceradio" value="No"
-                                            (change)="historyofarrear($event)">
+                                        <input class="form-check-input" type="radio" formControlName="arrear"
+                                            name="arrear" value="No" (change)="historyofarrear($event)" checked>
                                         <label class="form-check-label">No</label>
                                     </div>
                                 </div>
                             </td>
                         </tr>
 
-                        <tr *ngIf="history_of_arrear inline">
+                        <!-- <tr *ngIf="history_of_arrear inline">
                             <td id=" detail-name" class="pt-3">Details of History of Arrears
                             </td>
                             <td id="detail-gama" class="pt-3">:</td>
@@ -257,7 +258,7 @@
                                     <input class="form-control" type="date" name="" id="">
                                 </div>
                             </td>
-                        </tr>
+                        </tr> -->
 
                         <tr *ngIf="current_sem1">
                             <td id=" detail-name" class="pt-3"> Lack of Attendance
@@ -266,19 +267,23 @@
                             <td class="pt-3">
                                 <div class="inputs" style="max-width: 200px;">
                                     <div class="form-check form-check-inline">
-                                        <input class="form-check-input" type="radio" name="attendancelack" value="Yes"
-                                            (change)="lackofattendance($event)">
+                                        <input class="form-check-input" type="radio" formControlName="attendance"
+                                            name="attendance" value="Yes" (change)="lackofattendance($event)">
                                         <label class="form-check-label">Yes</label>
                                     </div>
                                     <div class="form-check form-check-inline">
-                                        <input class="form-check-input" type="radio" name="attendancelack" value="No"
-                                            (change)="lackofattendance($event)">
+                                        <input class="form-check-input" type="radio" formControlName="attendance"
+                                            name="attendance" value="No" (change)="lackofattendance($event)" checked>
                                         <label class="form-check-label">No</label>
                                     </div>
                                 </div>
                                 <div *ngIf="lackattendance" class="mt-3">
-                                    <textarea class="form-control" placeholder="Remarks"
-                                        style="max-width: 400px;"></textarea>
+                                    <textarea class="form-control" formControlName="remark" placeholder="Remarks"
+                                        style="max-width: 400px;">
+                                    </textarea>
+                                    <!-- <div *ngIf="submitted && f.remark.errors" class="invalid-feedback">
+                                        <div *ngIf="f.remark.errors.required">Remarks is Required</div>
+                                    </div> -->
                                 </div>
                             </td>
                         </tr>
@@ -348,8 +353,9 @@
                         <tr>
                             <td id="detail-name" class="pt-2"></td>
                             <td id="detail-gama" class="pt-3">
+                                <button class="btn btn-secondary m-3" type="reset" (click)="onReset()">Feed</button>
                                 <button class="btn btn-primary m-3">Feed Next</button>
-                                <button class="btn btn-secondary m-3" type="reset" (click)="onReset()">Reset</button>
+                                <button class="btn btn-secondary m-3" (click)="generate()">Generate</button>
                             </td>
                         </tr>
 

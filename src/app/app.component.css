@@ -6,7 +6,7 @@
 
 #head-01 {
     width: 100%;
-    height: 150px;
+    height: 120px;
     /* background: #1b2e51; */
     /* background: linear-gradient(to bottom,#599de0,#37DCF2); */
     background: url(../assets/nav-bg.png);
@@ -18,7 +18,7 @@
 }
 
 .head {
-    margin-top: 30px;
+    margin-top: 10px;
     width: 75%;
     height: 120px;
     text-align: center;
