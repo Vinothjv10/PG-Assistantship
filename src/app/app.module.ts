@@ -40,6 +40,7 @@ import { GceSalemComponent } from './colleges/gce-salem/gce-salem.component';
 import { PeriyarVellorComponent } from './colleges/periyar-vellor/periyar-vellor.component';
 import { ForgotPasswordComponent } from './forgot-password/forgot-password.component';
 import { SidebarComponent } from './sidebar/sidebar.component';
+import { NavbarComponent } from './navbar/navbar.component';
 
 
 
@@ -80,6 +81,7 @@ import { SidebarComponent } from './sidebar/sidebar.component';
     PeriyarVellorComponent,
     ForgotPasswordComponent,
     SidebarComponent,
+    NavbarComponent,
 
   ],
   imports: [

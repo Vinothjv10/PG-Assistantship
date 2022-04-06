@@ -1,8 +1,10 @@
+import { HttpClient } from '@angular/common/http';
 import { Component, Input, OnInit } from '@angular/core';
 import { FormBuilder, FormControl, FormGroup, Validators } from '@angular/forms';
 // import { HttpClient } from '@angular/common/http';
-
-
+interface coursename {
+  names: string;
+}
 
 @Component({
   selector: 'app-details-form',
@@ -18,6 +20,7 @@ export class DetailsFormComponent implements OnInit {
   lackattendance = false
 
   @Input() titles: any
+  @Input() courses: coursename[] = []
 
 
   toggleStyle: boolean = false;
@@ -44,7 +47,7 @@ export class DetailsFormComponent implements OnInit {
   // formBuilder: any;
 
   constructor(
-    private formBuilder: FormBuilder
+    private formBuilder: FormBuilder, private http: HttpClient
   ) {
   }
   registerForm: any = FormGroup;
@@ -136,7 +139,9 @@ export class DetailsFormComponent implements OnInit {
   }
 
   generate() {
-
+    this.http.get<any>('http://localhost:3000/api/users', this.registerForm.value).subscribe(data => {
+      console.log(data);
+    })
   }
 
   toggle() {

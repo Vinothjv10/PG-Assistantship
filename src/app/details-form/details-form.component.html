@@ -17,6 +17,11 @@
 
 
         <div class="cont-rows">
+            <!-- <div class="m-3" *ngFor="let dot of courses">
+                <div>
+                    {{dot.names}}
+                </div>
+            </div> -->
             <form [formGroup]="registerForm" (ngSubmit)="onSubmit()">
                 <div class="d-flex justify-content-center h3">{{titles}}</div>
                 <table class="table table-borderless mt-3" style="text-align: center;">

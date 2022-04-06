@@ -40,10 +40,30 @@ export class ViewFormComponent implements OnInit {
   @Input() Entry_Mode: any;
   @Input() lack_attentance: any;
 
+  datas = [
+    {
+      year: '',
+      course: 'sdfsdfsd',
+      branch: '',
+      name: '',
+      communal_category: '',
+      community_category: '',
+      entry_mode: '',
+      tancet: '',
+      arrear: '',
+      attendance: '',
+      bank: '',
+      ifsc: '',
+      contanct: '',
+      email: '',
+    }
+  ]
+
   constructor() { }
 
   ngOnInit(): void {
   }
+
 
   printout(): void {
     /* pass here the table id */
