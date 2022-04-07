@@ -11,18 +11,6 @@ export class ViewFormComponent implements OnInit {
 
   fileName = 'ExcelSheet.xlsx';
 
-  // @ViewChild('content', { static: false }) el!: ElementRef;
-
-  // printout() {
-  //   let pdf = new jsPDF('p', 'pt', 'a3');
-  //   pdf.html(this.el.nativeElement, {
-  //     callback: (pdf) => {
-  //       pdf.save("Details_File.xml");
-  //     }
-  //   });
-  //   // pdf.save();
-  // }
-
   @Input() college: any;
   @Input() name1: any;
   @Input() Stud_name: any;
