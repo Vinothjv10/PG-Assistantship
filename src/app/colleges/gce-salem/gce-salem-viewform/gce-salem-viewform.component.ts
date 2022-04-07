@@ -2,22 +2,25 @@ import { HttpClient } from '@angular/common/http';
 import { Component, OnInit } from '@angular/core';
 
 export interface data {
-  Name: any,
-  account_no: any,
-  attendance: any,
-  bank_Name: any,
+  academic: any,
+  year: any,
+  semester: any,
   branch: any,
-  college: any,
-  communalCategory: any,
-  community_Admitted: any,
-  courseName: any,
-  createdAt: any,
-  entry_Mode: any,
-  gate: any,
-  history_Arrear: any,
-  ifsc_code: any,
-  tancet: any,
-  year: any
+  course: any,
+  name: any,
+  community_admitted: any,
+  community_student: any,
+  mode: any,
+  score: any,
+  account: any,
+  bank: any,
+  ifsc: any,
+  phonenumber: any,
+  email: any,
+  arrear: any,
+  attendance: any,
+  remark: any,
+
 }
 
 @Component({

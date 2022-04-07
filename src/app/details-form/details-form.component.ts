@@ -139,9 +139,7 @@ export class DetailsFormComponent implements OnInit {
   }
 
   generate() {
-    this.http.get<any>('http://localhost:3000/api/users', this.registerForm.value).subscribe(data => {
-      console.log(data);
-    })
+    this.Last = true
   }
 
   toggle() {

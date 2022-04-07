@@ -57,9 +57,17 @@ export class GceSalemDetailsComponent implements OnInit {
       return;
     }
     console.log(this.registerForm.value);
+    this.http.post<any>('http://localhost:3100/api/users', this.registerForm.value).subscribe(data => {
+      console.log(data);
+      ({
+        next: (data: any) => {
+        },
+        error: (error: any) => {
+          console.error('There was an error!', error);
+        }
+      })
+    })
 
-    // display form values on success
-    // alert('SUCCESS!! :-)\n\n' + JSON.stringify(this.registerForm.value, null, 4));
     alert('🔥 SUCCESS!! ´◡` 🔥');
     // nxtpage() {
     this.registerForm.reset();

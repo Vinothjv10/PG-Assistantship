@@ -7,11 +7,11 @@
 
             </div>
             <tr>
-                <th class="col-sm-4 col-form-label" id="input">Year of Student </th>
-                <th class="col-sm-4 col-form-label" id="input">Name of the Course </th>
-                <th class="col-sm-4 col-form-label" id="input">Name of the Branch </th>
-                <th class="col-sm-4 col-form-label" id="input"> Student Name </th>
-                <th class="col-sm-4 col-form-label" id="input">Communal Category </th>
+                <th class="col-sm-4 col-form-label" id="input">Academic Year </th>
+                <th class="col-sm-4 col-form-label" id="input">Year of Study</th>
+                <th class="col-sm-4 col-form-label" id="input">Semester </th>
+                <th class="col-sm-4 col-form-label" id="input">Name of Branch </th>
+                <th class="col-sm-4 col-form-label" id="input"> </th>
                 <th class="col-sm-4 col-form-label" id="input"> Community Admitted </th>
                 <th class="col-sm-4 col-form-label" id="input"> Entry Mode </th>
                 <th class="col-sm-4 col-form-label" id="input"> Tancet Score </th>
@@ -20,50 +20,65 @@
                 <th class="col-sm-4 col-form-label" id="input"> Account No </th>
                 <th class="col-sm-4 col-form-label" id="input"> Bank Name </th>
                 <th class="col-sm-4 col-form-label" id="input"> IFSC Code </th>
+                <th class="col-sm-4 col-form-label" id="input"> IFSC Code </th>
+                <th class="col-sm-4 col-form-label" id="input"> IFSC Code </th>
+                <th class="col-sm-4 col-form-label" id="input"> IFSC Code </th>
             </tr>
             <tr *ngFor="let data of datas">
+                <td>
+                    {{data.academic}}
+                </td>
                 <td>
                     {{data.year}}
                 </td>
                 <td>
-                    {{data.courseName}}
+                    {{data.semester}}
                 </td>
                 <td>
                     {{data.branch}}
                 </td>
                 <td>
-                    {{data.Name}}
+                    {{data.course}}
                 </td>
                 <td>
-                    {{data.communalCategory}}
+                    {{data.name}}
                 </td>
                 <td>
-                    {{data.community_Admitted}}
+                    {{data.community_admitted}}
                 </td>
                 <td>
-                    {{data.entry_Mode}}
+                    {{data.community_student}}
                 </td>
                 <td>
-                    {{data.tancet}}
+                    {{data.mode}}
                 </td>
                 <td>
-                    {{data.history_Arrear}}
+                    {{data.score}}
+                </td>
+                <td>
+                    {{data.account}}
+                </td>
+                <td>
+                    {{data.bank}}
+                </td>
+                <td>
+                    {{data.ifsc}}
+                </td>
+                <td>
+                    {{data.phonenumber}}
+                </td>
+                <td>
+                    {{data.email}}
+                </td>
+                <td>
+                    {{data.arrear}}
                 </td>
                 <td>
                     {{data.attendance}}
                 </td>
                 <td>
-                    {{data.bank_Name}}
+                    {{data.remark}}
                 </td>
-                <td>
-                    {{data.ifsc_code}}
-                </td>
-                <!-- <td>
-                    {{data.contanct}}
-                </td>
-                <td>
-                    {{data.email}}
-                </td> -->
             </tr>
 
         </table>
