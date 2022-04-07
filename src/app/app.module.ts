@@ -41,6 +41,8 @@ import { PeriyarVellorComponent } from './colleges/periyar-vellor/periyar-vellor
 import { ForgotPasswordComponent } from './forgot-password/forgot-password.component';
 import { SidebarComponent } from './sidebar/sidebar.component';
 import { NavbarComponent } from './navbar/navbar.component';
+import { GceSalemDetailsComponent } from './colleges/gce-salem/gce-salem-details/gce-salem-details.component';
+import { GceSalemViewformComponent } from './colleges/gce-salem/gce-salem-viewform/gce-salem-viewform.component';
 
 
 
@@ -82,6 +84,8 @@ import { NavbarComponent } from './navbar/navbar.component';
     ForgotPasswordComponent,
     SidebarComponent,
     NavbarComponent,
+    GceSalemDetailsComponent,
+    GceSalemViewformComponent,
 
   ],
   imports: [

@@ -1,0 +1,33 @@
+.rows {
+    width: inherit;
+    height: inherit;
+    margin-right: 0px;
+    border-radius: 10px;
+    box-shadow: 0 3px 10px rgb(0 0 0 / 0.8);
+}
+
+#input {
+    width: 350px;
+    height: 20px;
+}
+
+button:hover {
+    background: linear-gradient(to bottom, #599de0, #37DCF2);
+    color: aliceblue;
+    font-size: 16px;
+}
+
+p {
+    font-size: 35px;
+    font-weight: 1000;
+}
+
+.view_table {
+    display: visible;
+}
+
+@media(max-width: 700px) {
+    .rows {
+        height: inherit;
+    }
+}
