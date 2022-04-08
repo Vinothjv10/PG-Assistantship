@@ -11,13 +11,14 @@ export class GceSalemDetailsComponent implements OnInit {
   current_sem1 = false
   history_of_arrear = false
   lackattendance = false
+  eligible = false
 
   toggleStyle: boolean = false;
 
 
   Last = false
 
-  submitted = false;
+  submitted = true;
   // formBuilder: any;
 
   constructor(private formBuilder: FormBuilder, private http: HttpClient) { }
@@ -36,15 +37,17 @@ export class GceSalemDetailsComponent implements OnInit {
       community_student: ['', Validators.required],
       mode: ['', Validators.required],
       score: ['', [Validators.required, Validators.pattern('[0-9]*')]],
+      arrear: [''],
+      attendance: [''],
+      remark: [''],
+      stipend: ['', Validators.required],
+      transition: [''],
+      date: [''],
       account: [null, [Validators.required, Validators.pattern('[0-9]*')]],
       bank: [null, [Validators.required, Validators.pattern('[a-zA-Z ]*')]],
       ifsc: ['', Validators.required],
       phonenumber: [null, [Validators.required, Validators.pattern('[0-9]*')]],
       email: [null, [Validators.required, Validators.email]],
-
-      arrear: [''],
-      attendance: [''],
-      remark: ['']
     });
   }
 
@@ -110,6 +113,15 @@ export class GceSalemDetailsComponent implements OnInit {
     }
     else if (g.target.value == "No") {
       this.lackattendance = false
+    }
+  }
+
+  stipend_eligible(f: any) {
+    if (f.target.value == "Yes") {
+      this.eligible = true
+    }
+    if (f.target.value == "No") {
+      this.eligible = false
     }
   }
 

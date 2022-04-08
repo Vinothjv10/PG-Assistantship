@@ -43,6 +43,28 @@ import { SidebarComponent } from './sidebar/sidebar.component';
 import { NavbarComponent } from './navbar/navbar.component';
 import { GceSalemDetailsComponent } from './colleges/gce-salem/gce-salem-details/gce-salem-details.component';
 import { GceSalemViewformComponent } from './colleges/gce-salem/gce-salem-viewform/gce-salem-viewform.component';
+import { ActChennaiDetailsComponent } from './colleges/act-chennai/act-chennai-details/act-chennai-details.component';
+import { ActChennaiViewformComponent } from './colleges/act-chennai/act-chennai-viewform/act-chennai-viewform.component';
+import { AlagapaDetailsComponent } from './colleges/alagapa/alagapa-details/alagapa-details.component';
+import { AlagapaViewformComponent } from './colleges/alagapa/alagapa-viewform/alagapa-viewform.component';
+import { AnnaUniversityCoimbatoreDetailsComponent } from './colleges/anna-university-coimbatore/anna-university-coimbatore-details/anna-university-coimbatore-details.component';
+import { AnnaUniversityCoimbatoreViewformComponent } from './colleges/anna-university-coimbatore/anna-university-coimbatore-viewform/anna-university-coimbatore-viewform.component';
+import { AnnaUniversityTirunelveliDetailsComponent } from './colleges/anna-university-tirunelveli/anna-university-tirunelveli-details/anna-university-tirunelveli-details.component';
+import { AnnaUniversityTirunelveliViewformComponent } from './colleges/anna-university-tirunelveli/anna-university-tirunelveli-viewform/anna-university-tirunelveli-viewform.component';
+import { CegGuindyDetailsComponent } from './colleges/ceg-guindy/ceg-guindy-details/ceg-guindy-details.component';
+import { CegGuindyViewformComponent } from './colleges/ceg-guindy/ceg-guindy-viewform/ceg-guindy-viewform.component';
+import { CitCoimbatoreDetailsComponent } from './colleges/cit-coimbatore/cit-coimbatore-details/cit-coimbatore-details.component';
+import { CitCoimbatoreViewformComponent } from './colleges/cit-coimbatore/cit-coimbatore-viewform/cit-coimbatore-viewform.component';
+import { GceBargurDetailsComponent } from './colleges/gce-bargur/gce-bargur-details/gce-bargur-details.component';
+import { GceBargurViewformComponent } from './colleges/gce-bargur/gce-bargur-viewform/gce-bargur-viewform.component';
+import { GceErodeDetailsComponent } from './colleges/gce-erode/gce-erode-details/gce-erode-details.component';
+import { GceErodeViewformComponent } from './colleges/gce-erode/gce-erode-viewform/gce-erode-viewform.component';
+import { GceTirunelveliDetailsComponent } from './colleges/gce-tirunelveli/gce-tirunelveli-details/gce-tirunelveli-details.component';
+import { GceTirunelveliViewformComponent } from './colleges/gce-tirunelveli/gce-tirunelveli-viewform/gce-tirunelveli-viewform.component';
+import { GctCoimbatoreDetailsComponent } from './colleges/gct-coimbatore/gct-coimbatore-details/gct-coimbatore-details.component';
+import { GctCoimbatoreViewformComponent } from './colleges/gct-coimbatore/gct-coimbatore-viewform/gct-coimbatore-viewform.component';
+import { AnnaUniversityMaduraiDetailsComponent } from './colleges/anna-university-madurai/anna-university-madurai-details/anna-university-madurai-details.component';
+import { AnnaUniversityMaduraiViewformComponent } from './colleges/anna-university-madurai/anna-university-madurai-viewform/anna-university-madurai-viewform.component';
 
 
 
@@ -86,6 +108,28 @@ import { GceSalemViewformComponent } from './colleges/gce-salem/gce-salem-viewfo
     NavbarComponent,
     GceSalemDetailsComponent,
     GceSalemViewformComponent,
+    ActChennaiDetailsComponent,
+    ActChennaiViewformComponent,
+    AlagapaDetailsComponent,
+    AlagapaViewformComponent,
+    AnnaUniversityCoimbatoreDetailsComponent,
+    AnnaUniversityCoimbatoreViewformComponent,
+    AnnaUniversityTirunelveliDetailsComponent,
+    AnnaUniversityTirunelveliViewformComponent,
+    CegGuindyDetailsComponent,
+    CegGuindyViewformComponent,
+    CitCoimbatoreDetailsComponent,
+    CitCoimbatoreViewformComponent,
+    GceBargurDetailsComponent,
+    GceBargurViewformComponent,
+    GceErodeDetailsComponent,
+    GceErodeViewformComponent,
+    GceTirunelveliDetailsComponent,
+    GceTirunelveliViewformComponent,
+    GctCoimbatoreDetailsComponent,
+    GctCoimbatoreViewformComponent,
+    AnnaUniversityMaduraiDetailsComponent,
+    AnnaUniversityMaduraiViewformComponent,
 
   ],
   imports: [

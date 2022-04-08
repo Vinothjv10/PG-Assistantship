@@ -17,13 +17,7 @@
 
 
         <div class="cont-rows">
-            <!-- <div class="m-3" *ngFor="let dot of courses">
-                <div>
-                    {{dot.names}}
-                </div>
-            </div> -->
             <form [formGroup]="registerForm" (ngSubmit)="onSubmit()">
-                <!-- <div class="d-flex justify-content-center h3">{{titles}}</div> -->
                 <table class="table table-borderless mt-3" style="text-align: center;">
                     <tbody>
                         <tr>
@@ -139,7 +133,7 @@
                                     <input type="text" formControlName="name" class="form-control"
                                         [ngClass]="{ 'is-invalid': submitted && f.name.errors }">
                                     <div *ngIf="submitted && f.name.errors" class="invalid-feedback">
-                                        <div *ngIf="f.name.errors.required">Name Name is Required</div>
+                                        <div *ngIf="f.name.errors.required">Name is Required</div>
                                         <div *ngIf="f.name.errors.pattern">Enter only Alphabet</div>
                                     </div>
                                 </div>
@@ -247,25 +241,6 @@
                             </td>
                         </tr>
 
-                        <!-- <tr *ngIf="history_of_arrear inline">
-                            <td id=" detail-name" class="pt-3">Details of History of Arrears
-                            </td>
-                            <td id="detail-gama" class="pt-3">:</td>
-                            <td class="pt-3">
-                                <div class="mt-3" style="max-width: 400px;">
-                                    <label class="mt-3" for="inputCity">Histroy of Arrear</label>
-                                    <select class="form-control">
-                                        <option value="">Choose...</option>
-                                        <option value="1">1</option>
-                                        <option value="2">2</option>
-                                        <option value="3">3</option>
-                                    </select>
-                                    <label class="mt-3" for="inputCity">Last Arrear clear date</label>
-                                    <input class="form-control" type="date" name="" id="">
-                                </div>
-                            </td>
-                        </tr> -->
-
                         <tr *ngIf="current_sem1">
                             <td id=" detail-name" class="pt-3"> Lack of Attendance
                             </td>
@@ -290,6 +265,54 @@
                                     <!-- <div *ngIf="submitted && f.remark.errors" class="invalid-feedback">
                                         <div *ngIf="f.remark.errors.required">Remarks is Required</div>
                                     </div> -->
+                                </div>
+                            </td>
+                        </tr>
+
+                        <tr>
+                            <td id=" detail-name" class="pt-3"> Are you Eligible for Stipend
+                            </td>
+                            <td id="detail-gama" class="pt-3">:</td>
+                            <td class="pt-3">
+                                <div class="inputs" style="max-width: 200px;">
+                                    <div class="form-check form-check-inline">
+                                        <input class="form-check-input" type="radio" formControlName="stipend"
+                                            name="stipend" value="Yes" (change)="stipend_eligible($event)"
+                                            [ngClass]="{ 'is-invalid': submitted && f.stipend.errors }">
+                                        <label class="form-check-label">Yes</label>
+                                    </div>
+                                    <div class="form-check form-check-inline">
+                                        <input class="form-check-input" type="radio" formControlName="stipend"
+                                            name="stipend" value="No" (change)="stipend_eligible($event)"
+                                            [ngClass]="{ 'is-invalid': submitted && f.stipend.errors }">
+                                        <label class="form-check-label">No</label>
+                                    </div>
+                                </div>
+                            </td>
+                        </tr>
+
+                        <tr *ngIf="eligible">
+                            <td id="detail-name" class="pt-3">Transition Receipt Number</td>
+                            <td id="detail-gama" class="pt-3">:</td>
+                            <td class="form-group pt-3">
+                                <input type="text" formControlName="transition" style="max-width: 400px;"
+                                    class="form-control" [ngClass]="{ 'is-invalid': submitted && f.transition.errors }">
+                                <div *ngIf="submitted && f.transition.errors" class="invalid-feedback">
+                                    <div *ngIf="f.transition.errors.required">Transition Number is Required</div>
+                                    <div *ngIf="f.transition.errors.pattern">Enter only Numbers</div>
+                                </div>
+                            </td>
+                        </tr>
+
+                        <tr *ngIf="eligible">
+                            <td id="detail-name" class="pt-3">Last Transition Date</td>
+                            <td id="detail-gama" class="pt-3">:</td>
+                            <td class="form-group pt-3">
+                                <input class="form-control" type="date" formControlName="date" style="max-width: 400px;"
+                                    name="" id="" class="form-control"
+                                    [ngClass]="{ 'is-invalid': submitted && f.date.errors }">
+                                <div *ngIf="submitted && f.date.errors" class="invalid-feedback">
+                                    <div *ngIf="f.date.errors.required">Date Number is Required</div>
                                 </div>
                             </td>
                         </tr>
@@ -368,7 +391,6 @@
                     </tbody>
                 </table>
             </form>
-
 
         </div>
     </div>

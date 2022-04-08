@@ -21,7 +21,9 @@ export interface data {
   arrear: any,
   attendance: any,
   remark: any,
-
+  stipend: any,
+  transition: any,
+  date: any,
 }
 
 @Component({

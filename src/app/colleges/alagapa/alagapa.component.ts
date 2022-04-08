@@ -8,6 +8,8 @@ import { Router } from '@angular/router';
 })
 export class AlagapaComponent implements OnInit {
 
+  title = "Alagappa Chettair Government College of Engineering and Technology, (Autonomous)"
+
   toggleStyle: boolean = false;
 
   Next = false

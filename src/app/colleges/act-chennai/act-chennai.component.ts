@@ -8,6 +8,8 @@ import { Router } from '@angular/router';
 })
 export class ActChennaiComponent implements OnInit {
 
+  title = "University Departments of Anna University, ACT Campus,Guindy, Chennai-600025"
+
   toggleStyle: boolean = false;
 
   Next = false

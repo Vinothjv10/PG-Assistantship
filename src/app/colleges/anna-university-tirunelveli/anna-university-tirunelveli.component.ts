@@ -8,6 +8,8 @@ import { Router } from '@angular/router';
 })
 export class AnnaUniversityTirunelveliComponent implements OnInit {
 
+  title = "Anna University Regional Campus, Tirunelveli-627007"
+
   toggleStyle: boolean = false;
 
   Next = false
