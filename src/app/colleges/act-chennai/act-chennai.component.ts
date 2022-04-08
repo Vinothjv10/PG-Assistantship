@@ -23,6 +23,7 @@ export class ActChennaiComponent implements OnInit {
   }
   nxtpage() {
     this.Next = true
+    // this.router.navigate(['act-chennai']);
   }
 
   toggle() {

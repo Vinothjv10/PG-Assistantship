@@ -65,7 +65,8 @@ import { GctCoimbatoreDetailsComponent } from './colleges/gct-coimbatore/gct-coi
 import { GctCoimbatoreViewformComponent } from './colleges/gct-coimbatore/gct-coimbatore-viewform/gct-coimbatore-viewform.component';
 import { AnnaUniversityMaduraiDetailsComponent } from './colleges/anna-university-madurai/anna-university-madurai-details/anna-university-madurai-details.component';
 import { AnnaUniversityMaduraiViewformComponent } from './colleges/anna-university-madurai/anna-university-madurai-viewform/anna-university-madurai-viewform.component';
-
+import { AdminLoginComponent } from './admin-login/admin-login.component';
+import { AdminpageComponent } from './admin-login/adminpage/adminpage.component';
 
 
 @NgModule({
@@ -130,6 +131,8 @@ import { AnnaUniversityMaduraiViewformComponent } from './colleges/anna-universi
     GctCoimbatoreViewformComponent,
     AnnaUniversityMaduraiDetailsComponent,
     AnnaUniversityMaduraiViewformComponent,
+    AdminLoginComponent,
+    AdminpageComponent,
 
   ],
   imports: [
