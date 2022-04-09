@@ -35,7 +35,8 @@ export class GceSalemComponent implements OnInit {
     this.router.navigate(['details']);
   }
   nxtpage() {
-    this.Next = true
+    // this.Next = true
+    // this.router.navigate(['/gce-salem-detail'])
   }
 
   toggle() {

@@ -382,9 +382,10 @@
                         <tr>
                             <td id="detail-name" class="pt-2"></td>
                             <td id="detail-gama" class="pt-3">
+                                <button class="btn btn-primary m-3" routerLink="/gce-salem">Back</button>
                                 <button class="btn btn-secondary m-3" type="reset" (click)="onReset()">Feed</button>
                                 <button class="btn btn-primary m-3">Feed Next</button>
-                                <button class="btn btn-secondary m-3" (click)="generate()">Generate</button>
+                                <button class="btn btn-secondary m-3" routerLink="/viewform">Generate</button>
                             </td>
                         </tr>
 
@@ -397,7 +398,7 @@
 </div>
 
 
-<app-gce-salem-viewform *ngIf="Last"></app-gce-salem-viewform>
+<!-- <app-gce-salem-viewform *ngIf="Last"></app-gce-salem-viewform> -->
 
 
 <!-- gate={{Gate}} -->

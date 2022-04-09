@@ -79,7 +79,7 @@
             <div class="college-btn" style="text-align: center;">
 
                 <button class="btn btn-outline-primary mt-4" style=" border-radius: 15px;width: 100px; height: 50px;"
-                    (click)="nxtpage()">
+                    (click)="nxtpage()" routerLink="/gce-salem-details">
                     Next
                 </button>
             </div>
@@ -87,6 +87,7 @@
     </div>
 </div>
 
+<router-outlet></router-outlet>
 
-<app-gce-salem-details *ngIf="Next"></app-gce-salem-details>
+<!-- <app-gce-salem-details *ngIf="Next"></app-gce-salem-details> -->
 <!-- [courses]="courses" [titles]="title" -->

@@ -5,13 +5,26 @@ import { AdminpageComponent } from './admin-login/adminpage/adminpage.component'
 import { ActChennaiDetailsComponent } from './colleges/act-chennai/act-chennai-details/act-chennai-details.component';
 import { ActChennaiViewformComponent } from './colleges/act-chennai/act-chennai-viewform/act-chennai-viewform.component';
 import { ActChennaiComponent } from './colleges/act-chennai/act-chennai.component';
+import { GceSalemDetailsComponent } from './colleges/gce-salem/gce-salem-details/gce-salem-details.component';
+import { GceSalemViewformComponent } from './colleges/gce-salem/gce-salem-viewform/gce-salem-viewform.component';
+import { GceSalemComponent } from './colleges/gce-salem/gce-salem.component';
 import { ForgotPasswordComponent } from './forgot-password/forgot-password.component';
 import { LoginComponent } from './login/login.component';
 import { ViewFormComponent } from './view-form/view-form.component';
 
 const routes: Routes = [
+
   {
     path: "", component: LoginComponent,
+  },
+  // { path: '**', component: LoginComponent },
+  { path: 'gce-salem', component: GceSalemComponent },
+  { path: 'viewform', component: GceSalemViewformComponent },
+  {
+    path: 'gce-salem-details',
+    children: [
+      { path: '', component: GceSalemDetailsComponent },
+    ]
   },
   {
     path: 'act-chennai', component: ActChennaiDetailsComponent,

@@ -1,6 +1,7 @@
 import { HttpClient } from '@angular/common/http';
 import { Component, OnInit } from '@angular/core';
 import { FormBuilder, FormGroup, Validators } from '@angular/forms';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-gce-salem-details',
@@ -21,7 +22,7 @@ export class GceSalemDetailsComponent implements OnInit {
   submitted = true;
   // formBuilder: any;
 
-  constructor(private formBuilder: FormBuilder, private http: HttpClient) { }
+  constructor(private formBuilder: FormBuilder, private http: HttpClient, private router: Router) { }
 
   registerForm: any = FormGroup;
 
@@ -131,7 +132,8 @@ export class GceSalemDetailsComponent implements OnInit {
   }
 
   generate() {
-    this.Last = true;
+    // this.Last = true;
+    this.router.navigateByUrl('viewform');
   }
 
   toggle() {
