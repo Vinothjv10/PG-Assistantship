@@ -1,0 +1,21 @@
+.navbar_1 {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: flex-end;
+
+}
+
+.child {
+    font-size: 20px;
+    padding-left: 35px;
+}
+
+a {
+    cursor: pointer;
+    text-decoration: none;
+    color: black;
+}
+
+a:hover {
+    color: blue;
+}

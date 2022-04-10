@@ -67,6 +67,7 @@ import { AnnaUniversityMaduraiDetailsComponent } from './colleges/anna-universit
 import { AnnaUniversityMaduraiViewformComponent } from './colleges/anna-university-madurai/anna-university-madurai-viewform/anna-university-madurai-viewform.component';
 import { AdminLoginComponent } from './admin-login/admin-login.component';
 import { AdminpageComponent } from './admin-login/adminpage/adminpage.component';
+import { AdminUniversityComponent } from './admin-university/admin-university.component';
 
 
 @NgModule({
@@ -133,6 +134,7 @@ import { AdminpageComponent } from './admin-login/adminpage/adminpage.component'
     AnnaUniversityMaduraiViewformComponent,
     AdminLoginComponent,
     AdminpageComponent,
+    AdminUniversityComponent,
 
   ],
   imports: [

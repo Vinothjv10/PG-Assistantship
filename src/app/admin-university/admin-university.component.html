@@ -1,0 +1,61 @@
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+<div>
+
+    <div class="portal-container mt-3" style="width: 100%;  height: inherit; text-align: center;">
+        <marquee behavior="alternate" style=" font-size: 30px;height: inherit; color: green; font-weight: 600;">Online
+            Post
+            Graduate
+            Assistantship and Non-Gate PG
+            Scholars
+            2021-2022
+            (User Portal)
+        </marquee>
+
+        <p class="mt-2" style="font-size:19px; color: red;">
+            *** Students are not allowed to enter details themselves. Only College authority is allowed to Login and
+            enter
+            details ***
+        </p>
+
+        <p style="color: blue;">
+            KINDLY ENSURE THAT THE PG ASSISTANTSHIP AND NON-GATE PG SCHOLARS APPLICATIONS ARE FILLED WITH CORRECT
+            DETAILS...
+        </p>
+    </div>
+
+
+    <div *ngIf="forgot_password" class="login-box-container pt-5">
+
+        <form class=" login-box pt-3" style="text-align: center;" [formGroup]="AdminForm" (ngSubmit)="submitData()">
+            <div class="login-logo">
+                <img src="assets/user.png" style="height: 70px; width: 70px;margin-top: -70px;">
+            </div>
+            <p style="font-size: 25px; font-weight: 600;">University-Admin Login</p>
+
+            <div class="input-group mb-4 mt-4" id="login-input">
+                <input type="text" formControlName="code" class="form-control" placeholder="College code">
+            </div>
+
+            <div class="input-group mb-3 mt-4" id="login-input">
+                <input type="password" formControlName="password" id="input-code" class="form-control"
+                    placeholder="Password">
+                <div style="color: red;" *ngIf="password.invalid && (password.touched || password.dirty)">
+                    <span class="error" *ngIf="password.errors?.required">*Enter vaild password</span>
+                </div>
+            </div>
+
+            <button class="btn btn-primary mt-4" style=" border-radius: 14px;" [disabled]="AdminForm.invalid">Login
+            </button>
+
+            <div (click)="forgot()" style="margin-left: 190px; margin-top: 10px; cursor: pointer;"> Forgot password ?
+            </div>
+
+        </form>
+
+    </div>
+    <app-forgot-password *ngIf="forgot_password_1"></app-forgot-password>
+
+</div>
+
+<router-outlet></router-outlet>

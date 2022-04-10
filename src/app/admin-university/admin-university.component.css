@@ -1,0 +1,46 @@
+#title {
+    width: 100%;
+    height: 20px;
+}
+
+.login-box-container {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+.login-box {
+    width: 350px;
+    height: 320px;
+    border-radius: 10px;
+    box-shadow: 0 3px 10px rgb(0 0 0 / 0.8);
+    /* background: none; */
+    background-image: url(https://www.extramarks.com/static/media/orange-box.19845d84.svg);
+    background-size: cover;
+    border-radius: 30px 60px;
+
+}
+
+.form-control {
+    max-width: 250px;
+}
+
+#login-input {
+    margin-left: 50px;
+}
+
+button:hover {
+    background: linear-gradient(to bottom, #599de0, #37DCF2);
+    color: aliceblue;
+    font-size: 16px;
+}
+
+@media(max-width: 568px) {
+    .form-control {
+        max-width: 300px;
+    }
+
+    #login-input {
+        margin-left: 15px;
+    }
+}
