@@ -1,5 +1,8 @@
 <div>
     <div class="rows mt-4" style="text-align: center;">
+        <div class="input-box d-flex flex-wrap justify-content-center">
+            <input type="text" [(ngModel)]="filteredString" class="form-control" placeholder="Id...">
+        </div>
         <p class="mt-1" style="font-size: 35px;">Students Details</p>
 
         <table class="mt-3 view_table table table-border" id="excel-table">
@@ -31,7 +34,7 @@
                 <th class="col-sm-4 col-form-label" id="input"> Date</th>
 
             </tr>
-            <tr *ngFor="let data of datas">
+            <tr *ngFor="let data of datas | filter: filteredString">
                 <td>
                     {{data._id}}
                 </td>

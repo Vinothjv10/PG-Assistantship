@@ -69,6 +69,7 @@ import { AdminLoginComponent } from './admin-login/admin-login.component';
 import { AdminpageComponent } from './admin-login/adminpage/adminpage.component';
 import { AdminUniversityComponent } from './admin-university/admin-university.component';
 import { AdminUniversityViewpageComponent } from './admin-university/admin-university-viewpage/admin-university-viewpage.component';
+import { FilterPipe } from './admin-login/filter.pipe';
 
 
 @NgModule({
@@ -137,6 +138,7 @@ import { AdminUniversityViewpageComponent } from './admin-university/admin-unive
     AdminpageComponent,
     AdminUniversityComponent,
     AdminUniversityViewpageComponent,
+    FilterPipe,
 
   ],
   imports: [
