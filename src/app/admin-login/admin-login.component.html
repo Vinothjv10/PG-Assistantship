@@ -27,7 +27,7 @@
 
     <div *ngIf="forgot_password" class="login-box-container pt-5">
 
-        <form class=" login-box pt-3" style="text-align: center;" [formGroup]="AdminForm" (ngSubmit)="submitData()">
+        <form class=" login-box pt-3" style="text-align: center;" [formGroup]="AdminForm" (ngSubmit)="adminlogin()">
             <div class="login-logo">
                 <img src="assets/user.png" style="height: 70px; width: 70px;margin-top: -70px;">
             </div>

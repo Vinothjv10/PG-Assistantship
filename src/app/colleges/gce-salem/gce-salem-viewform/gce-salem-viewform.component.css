@@ -3,7 +3,7 @@
     height: inherit;
     margin-right: 0px;
     border-radius: 10px;
-    box-shadow: 0 3px 10px rgb(0 0 0 / 0.8);
+    /* box-shadow: 0 3px 10px rgb(0 0 0 / 0.8); */
 }
 
 #input {
@@ -15,6 +15,10 @@ button:hover {
     background: linear-gradient(to bottom, #599de0, #37DCF2);
     color: aliceblue;
     font-size: 16px;
+}
+
+td {
+    font-size: 15px;
 }
 
 p {

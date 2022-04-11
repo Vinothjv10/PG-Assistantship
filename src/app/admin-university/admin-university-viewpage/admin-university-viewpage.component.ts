@@ -27,12 +27,13 @@ export interface data {
   date: any,
 }
 
+
 @Component({
-  selector: 'app-gce-salem-viewform',
-  templateUrl: './gce-salem-viewform.component.html',
-  styleUrls: ['./gce-salem-viewform.component.css']
+  selector: 'app-admin-university-viewpage',
+  templateUrl: './admin-university-viewpage.component.html',
+  styleUrls: ['./admin-university-viewpage.component.css']
 })
-export class GceSalemViewformComponent implements OnInit {
+export class AdminUniversityViewpageComponent implements OnInit {
 
   fileName = 'ExcelSheet.xlsx';
 
@@ -66,3 +67,5 @@ export class GceSalemViewformComponent implements OnInit {
     XLSX.writeFile(wb, this.fileName);
   }
 }
+
+

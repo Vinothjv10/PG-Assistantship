@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { FormControl, FormGroup, Validators } from '@angular/forms';
+import { ActivatedRoute, Router } from '@angular/router';
 
 @Component({
   selector: 'app-admin-login',
@@ -11,7 +12,7 @@ export class AdminLoginComponent implements OnInit {
   forgot_password = true;
   forgot_password_1 = false;
 
-  constructor() { }
+  constructor(private router: Router, private route: ActivatedRoute) { }
 
   AdminForm: any
 
@@ -26,8 +27,8 @@ export class AdminLoginComponent implements OnInit {
   get password() { return this.AdminForm.get('password'); }
 
 
-  submitData() {
-
+  adminlogin() {
+    this.router.navigate(['admin'], { relativeTo: this.route });
   }
   forgot() {
 
