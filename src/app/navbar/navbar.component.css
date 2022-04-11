@@ -2,7 +2,7 @@
     display: flex;
     flex-wrap: wrap;
     justify-content: space-around;
-    background: url(assets/nav);
+    /* background-image: linear-gradient(to right, rgb(179, 231, 163), rgb(137, 231, 116)); */
 }
 
 .time_zone {
