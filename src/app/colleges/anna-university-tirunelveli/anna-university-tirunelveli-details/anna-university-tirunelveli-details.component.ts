@@ -1,6 +1,7 @@
 import { HttpClient } from '@angular/common/http';
 import { Component, OnInit } from '@angular/core';
 import { FormBuilder, FormGroup, Validators } from '@angular/forms';
+import { ActivatedRoute, Router } from '@angular/router';
 
 @Component({
   selector: 'app-anna-university-tirunelveli-details',
@@ -8,6 +9,7 @@ import { FormBuilder, FormGroup, Validators } from '@angular/forms';
   styleUrls: ['./anna-university-tirunelveli-details.component.css']
 })
 export class AnnaUniversityTirunelveliDetailsComponent implements OnInit {
+
   current_sem1 = false
   history_of_arrear = false
   lackattendance = false
@@ -20,7 +22,7 @@ export class AnnaUniversityTirunelveliDetailsComponent implements OnInit {
 
   submitted = true;
 
-  constructor(private formBuilder: FormBuilder, private http: HttpClient) { }
+  constructor(private formBuilder: FormBuilder, private http: HttpClient, private router: Router, private route: ActivatedRoute) { }
 
   registerForm: any = FormGroup;
 
@@ -117,10 +119,10 @@ export class AnnaUniversityTirunelveliDetailsComponent implements OnInit {
   }
 
   stipend_eligible(f: any) {
-    if (f.target.value == "Yes") {
+    if (f.target.value == "Paid") {
       this.eligible = true
     }
-    if (f.target.value == "No") {
+    if (f.target.value == "Unpaid") {
       this.eligible = false
     }
   }
@@ -134,7 +136,12 @@ export class AnnaUniversityTirunelveliDetailsComponent implements OnInit {
     this.Last = true;
   }
 
+  nextpage() {
+    this.router.navigate(['uni-tirunelveli-viewform'], { relativeTo: this.route })
+  }
+
   toggle() {
     this.toggleStyle = !this.toggleStyle;
   }
+
 }

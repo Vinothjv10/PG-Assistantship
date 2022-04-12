@@ -1,6 +1,7 @@
 import { HttpClient } from '@angular/common/http';
 import { Component, OnInit } from '@angular/core';
 import { FormBuilder, FormGroup, Validators } from '@angular/forms';
+import { ActivatedRoute, Router } from '@angular/router';
 
 @Component({
   selector: 'app-ceg-guindy-details',
@@ -21,7 +22,7 @@ export class CegGuindyDetailsComponent implements OnInit {
 
   submitted = true;
 
-  constructor(private formBuilder: FormBuilder, private http: HttpClient) { }
+  constructor(private formBuilder: FormBuilder, private http: HttpClient, private router: Router, private route: ActivatedRoute) { }
 
   registerForm: any = FormGroup;
 
@@ -118,10 +119,10 @@ export class CegGuindyDetailsComponent implements OnInit {
   }
 
   stipend_eligible(f: any) {
-    if (f.target.value == "Yes") {
+    if (f.target.value == "Paid") {
       this.eligible = true
     }
-    if (f.target.value == "No") {
+    if (f.target.value == "Unpaid") {
       this.eligible = false
     }
   }
@@ -135,8 +136,12 @@ export class CegGuindyDetailsComponent implements OnInit {
     this.Last = true;
   }
 
+  nextpage() {
+    this.router.navigate(['ceg-guindy-viewform'], { relativeTo: this.route })
+  }
+
   toggle() {
     this.toggleStyle = !this.toggleStyle;
   }
-}
 
+}

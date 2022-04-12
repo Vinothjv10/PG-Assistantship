@@ -78,7 +78,7 @@
             <div class="college-btn" style="text-align: center;">
 
                 <button class="btn btn-outline-primary mt-4" style=" border-radius: 15px;width: 100px; height: 50px;"
-                    (click)="nxtpage()">
+                    routerLink="/uni-tirunelveli-details">
                     Next
                 </button>
             </div>
@@ -86,5 +86,6 @@
     </div>
 </div>
 
+<router-outlet></router-outlet>
 
-<app-anna-university-tirunelveli *ngIf="Next"></app-anna-university-tirunelveli>
+<!-- <app-anna-university-tirunelveli *ngIf="Next"></app-anna-university-tirunelveli> -->

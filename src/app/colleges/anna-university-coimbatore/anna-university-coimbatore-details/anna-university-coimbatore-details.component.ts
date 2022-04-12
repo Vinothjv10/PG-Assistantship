@@ -119,10 +119,10 @@ export class AnnaUniversityCoimbatoreDetailsComponent implements OnInit {
   }
 
   stipend_eligible(f: any) {
-    if (f.target.value == "Yes") {
+    if (f.target.value == "Paid") {
       this.eligible = true
     }
-    if (f.target.value == "No") {
+    if (f.target.value == "Unpaid") {
       this.eligible = false
     }
   }
