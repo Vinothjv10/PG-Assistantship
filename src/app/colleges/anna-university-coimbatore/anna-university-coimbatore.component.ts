@@ -22,9 +22,7 @@ export class AnnaUniversityCoimbatoreComponent implements OnInit {
   details() {
     this.router.navigate(['details']);
   }
-  nxtpage() {
-    this.Next = true
-  }
+
 
   toggle() {
     this.toggleStyle = !this.toggleStyle;

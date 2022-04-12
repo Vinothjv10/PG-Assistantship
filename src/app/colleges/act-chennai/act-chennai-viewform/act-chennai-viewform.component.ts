@@ -3,6 +3,7 @@ import { Component, OnInit } from '@angular/core';
 import * as XLSX from 'xlsx';
 
 export interface data {
+  _id: any,
   academic: any,
   year: any,
   semester: any,
@@ -25,6 +26,7 @@ export interface data {
   transition: any,
   date: any,
 }
+
 
 @Component({
   selector: 'app-act-chennai-viewform',

@@ -1,6 +1,7 @@
 import { HttpClient } from '@angular/common/http';
 import { Component, OnInit } from '@angular/core';
 import { FormBuilder, FormGroup, Validators } from '@angular/forms';
+import { ActivatedRoute, Router } from '@angular/router';
 
 @Component({
   selector: 'app-anna-university-coimbatore-details',
@@ -8,6 +9,7 @@ import { FormBuilder, FormGroup, Validators } from '@angular/forms';
   styleUrls: ['./anna-university-coimbatore-details.component.css']
 })
 export class AnnaUniversityCoimbatoreDetailsComponent implements OnInit {
+
   current_sem1 = false
   history_of_arrear = false
   lackattendance = false
@@ -20,7 +22,7 @@ export class AnnaUniversityCoimbatoreDetailsComponent implements OnInit {
 
   submitted = true;
 
-  constructor(private formBuilder: FormBuilder, private http: HttpClient) { }
+  constructor(private formBuilder: FormBuilder, private http: HttpClient, private router: Router, private route: ActivatedRoute) { }
 
   registerForm: any = FormGroup;
 
@@ -134,7 +136,12 @@ export class AnnaUniversityCoimbatoreDetailsComponent implements OnInit {
     this.Last = true;
   }
 
+  nextpage() {
+    this.router.navigate(['uni-coimbatore-viewform'], { relativeTo: this.route })
+  }
+
   toggle() {
     this.toggleStyle = !this.toggleStyle;
   }
+
 }

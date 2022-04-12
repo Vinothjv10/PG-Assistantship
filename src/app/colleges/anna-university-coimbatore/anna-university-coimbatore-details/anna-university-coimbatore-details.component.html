@@ -117,8 +117,17 @@
                                 <select class="form-control" formControlName="course" style="max-width: 400px;"
                                     [ngClass]="{ 'is-invalid': submitted && f.course.errors }">
                                     <option value="">Choose...</option>
-                                    <option value="M.E Applied Electronics">M.E Applied Electronics</option>
-                                    <option value="M.E COMMUNICATION SYSTEMS">M.E Communicaton Systems</option>
+                                    <option value="M.E Communication Systems(SS-FT) (4304)">M.E Communication
+                                        Systems(SS-FT) (4304)
+                                    </option>
+                                    <option value="M.E Computer Science and Engineering(SS-FT) (4305)">M.E Computer
+                                        Science and Engineering(SS-FT) (4305)</option>
+                                    <option value="M.E 3.	M.E - Engineering Design(SS-FT) (2301)">M.E 3. M.E -
+                                        Engineering Design(SS-FT) (2301)</option>
+                                    <option value="M.E Power Systems Engineering(SS-FT) (3301)">M.E Power Systems
+                                        Engineering(SS-FT) (3301)
+                                    </option>
+
                                 </select>
                                 <div *ngIf="submitted && f.course.errors" class="invalid-feedback">
                                     <div *ngIf="f.course.errors.required">Course is required</div>
@@ -277,15 +286,15 @@
                                 <div class="inputs" style="max-width: 200px;">
                                     <div class="form-check form-check-inline">
                                         <input class="form-check-input" type="radio" formControlName="stipend"
-                                            name="stipend" value="Yes" (change)="stipend_eligible($event)"
+                                            name="stipend" value="Paid" (change)="stipend_eligible($event)"
                                             [ngClass]="{ 'is-invalid': submitted && f.stipend.errors }">
-                                        <label class="form-check-label">Yes</label>
+                                        <label class="form-check-label">Paid</label>
                                     </div>
                                     <div class="form-check form-check-inline">
                                         <input class="form-check-input" type="radio" formControlName="stipend"
-                                            name="stipend" value="No" (change)="stipend_eligible($event)"
+                                            name="stipend" value="Unpaid" (change)="stipend_eligible($event)"
                                             [ngClass]="{ 'is-invalid': submitted && f.stipend.errors }">
-                                        <label class="form-check-label">No</label>
+                                        <label class="form-check-label">Unpaid</label>
                                     </div>
                                 </div>
                             </td>
@@ -382,9 +391,10 @@
                         <tr>
                             <td id="detail-name" class="pt-2"></td>
                             <td id="detail-gama" class="pt-3">
+                                <button class="btn btn-primary m-3" routerLink="/uni-coimbatore">Back</button>
                                 <button class="btn btn-secondary m-3" type="reset" (click)="onReset()">Feed</button>
                                 <button class="btn btn-primary m-3">Feed Next</button>
-                                <button class="btn btn-secondary m-3" (click)="generate()">Generate</button>
+                                <button class="btn btn-secondary m-3" (click)="nextpage()">Generate</button>
                             </td>
                         </tr>
 
@@ -395,10 +405,3 @@
         </div>
     </div>
 </div>
-
-
-<app-anna-university-coimbatore-viewform *ngIf="Last"></app-anna-university-coimbatore-viewform>
-
-
-<!-- gate={{Gate}} -->
-<!-- attendance={{Attendance}} -->

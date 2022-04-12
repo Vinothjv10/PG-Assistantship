@@ -1,7 +1,7 @@
 import { HttpClient } from '@angular/common/http';
 import { Component, OnInit } from '@angular/core';
 import { FormBuilder, FormGroup, Validators } from '@angular/forms';
-import { Router } from '@angular/router';
+import { ActivatedRoute, Router } from '@angular/router';
 
 @Component({
   selector: 'app-act-chennai-details',
@@ -23,7 +23,7 @@ export class ActChennaiDetailsComponent implements OnInit {
   submitted = true;
   // formBuilder: any;
 
-  constructor(private formBuilder: FormBuilder, private http: HttpClient, private router: Router) { }
+  constructor(private formBuilder: FormBuilder, private http: HttpClient, private router: Router, private route: ActivatedRoute) { }
 
   registerForm: any = FormGroup;
 
@@ -143,6 +143,10 @@ export class ActChennaiDetailsComponent implements OnInit {
 
   toggle() {
     this.toggleStyle = !this.toggleStyle;
+  }
+
+  nextpage() {
+    this.router.navigate(['act-chennai-form'], { relativeTo: this.route })
   }
 
 }

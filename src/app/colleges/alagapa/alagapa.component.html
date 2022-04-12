@@ -78,7 +78,7 @@
             <div class="college-btn" style="text-align: center;">
 
                 <button class="btn btn-outline-primary mt-4" style=" border-radius: 15px;width: 100px; height: 50px;"
-                    (click)="nxtpage()">
+                    routerLink="/alagapa-details">
                     Next
                 </button>
             </div>
@@ -86,5 +86,4 @@
     </div>
 </div>
 
-
-<app-alagapa-details *ngIf="Next"></app-alagapa-details>
+<router-outlet></router-outlet>

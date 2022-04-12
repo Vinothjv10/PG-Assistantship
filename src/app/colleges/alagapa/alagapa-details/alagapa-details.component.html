@@ -117,8 +117,19 @@
                                 <select class="form-control" formControlName="course" style="max-width: 400px;"
                                     [ngClass]="{ 'is-invalid': submitted && f.course.errors }">
                                     <option value="">Choose...</option>
-                                    <option value="M.E Applied Electronics">M.E Applied Electronics</option>
-                                    <option value="M.E COMMUNICATION SYSTEMS">M.E Communicaton Systems</option>
+                                    <option value="M.E Computer Aided Design (2008)">M.E Computer Aided Design (2008)
+                                    </option>
+                                    <option value="M.E Environmental Engineering (1001)">M.E Environmental Engineering
+                                        (1001)</option>
+                                    <option value="M.E Manufacturing Engineering (2013)">M.E Manufacturing Engineering
+                                        (2013)</option>
+                                    <option value="M.E Optical Communication (4003)">M.E Optical Communication (4003)
+                                    </option>
+                                    <option value="M.E Power Electronics & Drives (3004)">M.E Power Electronics & Drives
+                                        (3004)</option>
+                                    <option value="M.E Structural Engineering (1002)">M.E Structural Engineering (1002)
+                                    </option>
+
                                 </select>
                                 <div *ngIf="submitted && f.course.errors" class="invalid-feedback">
                                     <div *ngIf="f.course.errors.required">Course is required</div>
@@ -277,15 +288,15 @@
                                 <div class="inputs" style="max-width: 200px;">
                                     <div class="form-check form-check-inline">
                                         <input class="form-check-input" type="radio" formControlName="stipend"
-                                            name="stipend" value="Yes" (change)="stipend_eligible($event)"
+                                            name="stipend" value="Paid" (change)="stipend_eligible($event)"
                                             [ngClass]="{ 'is-invalid': submitted && f.stipend.errors }">
-                                        <label class="form-check-label">Yes</label>
+                                        <label class="form-check-label">Paid</label>
                                     </div>
                                     <div class="form-check form-check-inline">
                                         <input class="form-check-input" type="radio" formControlName="stipend"
-                                            name="stipend" value="No" (change)="stipend_eligible($event)"
+                                            name="stipend" value="Unpaid" (change)="stipend_eligible($event)"
                                             [ngClass]="{ 'is-invalid': submitted && f.stipend.errors }">
-                                        <label class="form-check-label">No</label>
+                                        <label class="form-check-label">Unpaid</label>
                                     </div>
                                 </div>
                             </td>
@@ -382,9 +393,10 @@
                         <tr>
                             <td id="detail-name" class="pt-2"></td>
                             <td id="detail-gama" class="pt-3">
+                                <button class="btn btn-primary m-3" routerLink="/alagapa">Back</button>
                                 <button class="btn btn-secondary m-3" type="reset" (click)="onReset()">Feed</button>
                                 <button class="btn btn-primary m-3">Feed Next</button>
-                                <button class="btn btn-secondary m-3" (click)="generate()">Generate</button>
+                                <button class="btn btn-secondary m-3" (click)="nextpage()">Generate</button>
                             </td>
                         </tr>
 
@@ -395,10 +407,3 @@
         </div>
     </div>
 </div>
-
-
-<app-alagapa-viewform *ngIf="Last"></app-alagapa-viewform>
-
-
-<!-- gate={{Gate}} -->
-<!-- attendance={{Attendance}} -->

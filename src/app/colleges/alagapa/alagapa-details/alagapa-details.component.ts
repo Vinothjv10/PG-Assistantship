@@ -1,6 +1,7 @@
 import { HttpClient } from '@angular/common/http';
 import { Component, OnInit } from '@angular/core';
 import { FormBuilder, FormGroup, Validators } from '@angular/forms';
+import { ActivatedRoute, Router } from '@angular/router';
 
 @Component({
   selector: 'app-alagapa-details',
@@ -20,7 +21,7 @@ export class AlagapaDetailsComponent implements OnInit {
 
   submitted = true;
 
-  constructor(private formBuilder: FormBuilder, private http: HttpClient) { }
+  constructor(private formBuilder: FormBuilder, private http: HttpClient, private router: Router, private route: ActivatedRoute) { }
 
   registerForm: any = FormGroup;
 
@@ -132,6 +133,10 @@ export class AlagapaDetailsComponent implements OnInit {
 
   generate() {
     this.Last = true;
+  }
+
+  nextpage() {
+    this.router.navigate(['alagapa-viewform'], { relativeTo: this.route })
   }
 
   toggle() {

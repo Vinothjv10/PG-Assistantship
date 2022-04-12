@@ -7,6 +7,12 @@ import { AdminUniversityComponent } from './admin-university/admin-university.co
 import { ActChennaiDetailsComponent } from './colleges/act-chennai/act-chennai-details/act-chennai-details.component';
 import { ActChennaiViewformComponent } from './colleges/act-chennai/act-chennai-viewform/act-chennai-viewform.component';
 import { ActChennaiComponent } from './colleges/act-chennai/act-chennai.component';
+import { AlagapaDetailsComponent } from './colleges/alagapa/alagapa-details/alagapa-details.component';
+import { AlagapaViewformComponent } from './colleges/alagapa/alagapa-viewform/alagapa-viewform.component';
+import { AlagapaComponent } from './colleges/alagapa/alagapa.component';
+import { AnnaUniversityCoimbatoreDetailsComponent } from './colleges/anna-university-coimbatore/anna-university-coimbatore-details/anna-university-coimbatore-details.component';
+import { AnnaUniversityCoimbatoreViewformComponent } from './colleges/anna-university-coimbatore/anna-university-coimbatore-viewform/anna-university-coimbatore-viewform.component';
+import { AnnaUniversityCoimbatoreComponent } from './colleges/anna-university-coimbatore/anna-university-coimbatore.component';
 import { GceSalemDetailsComponent } from './colleges/gce-salem/gce-salem-details/gce-salem-details.component';
 import { GceSalemViewformComponent } from './colleges/gce-salem/gce-salem-viewform/gce-salem-viewform.component';
 import { GceSalemComponent } from './colleges/gce-salem/gce-salem.component';
@@ -19,7 +25,8 @@ const routes: Routes = [
   {
     path: "", component: LoginComponent,
   },
-  // { path: '**', component: LoginComponent },
+
+
   { path: 'gce-salem', component: GceSalemComponent },
   { path: 'gce-viewform', component: GceSalemViewformComponent },
   {
@@ -32,13 +39,31 @@ const routes: Routes = [
 
   { path: 'act-chennai', component: ActChennaiComponent },
   {
-    path: 'act-chennai-details', component: ActChennaiDetailsComponent,
+    path: 'act-chennai-details',
     children: [
-      {
-        path: 'act-chennai-form', component: ActChennaiViewformComponent
-      }
+      { path: '', component: ActChennaiDetailsComponent },
+      { path: 'act-chennai-form', component: ActChennaiViewformComponent }
     ]
   },
+
+  { path: 'alagapa', component: AlagapaComponent },
+  {
+    path: 'alagapa-details',
+    children: [
+      { path: '', component: AlagapaDetailsComponent },
+      { path: 'alagapa-viewform', component: AlagapaViewformComponent }
+    ]
+  },
+
+  { path: 'uni-coimbatore', component: AnnaUniversityCoimbatoreComponent },
+  {
+    path: 'uni-coimbatore-details',
+    children: [
+      { path: '', component: AnnaUniversityCoimbatoreDetailsComponent },
+      { path: 'uni-coimbatore-viewform', component: AnnaUniversityCoimbatoreViewformComponent }
+    ]
+  },
+
   {
     path: 'admin-login',
     children: [

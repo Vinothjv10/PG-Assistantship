@@ -121,15 +121,32 @@
                                         -Bio-Pharmaceuticals Technology (5307) </option>
                                     <option value="M.Tech.- Environmental Science and Technology (5305)">M.Tech.-
                                         Environmental Science and Technology (5305)</option>
-                                    <option value="M.E - Power Electronics & Drives (3004)">M.E - Power Electronics &
-                                        Drives (3004)</option>
-                                    <option value="M.E - Structural Engineering (1002)">M.E - Structural Engineering
-                                        (1002)</option>
-                                    <option value="M.E - Thermal Engineering (2017)">M.E - Thermal Engineering (2017)
+                                    <option value="M.Tech. -Food Technology
+                                    (5310)">M.Tech. -Food Technology
+                                        (5310)</option>
+                                    <option value="	M.Tech. -Nano Science & Technology (5317)">M.Tech. -Nano
+                                        Science & Technology (5317)</option>
+                                    <option value="M.Tech.- Industrial Safety and Hazard Management (5321)">M.Tech.-
+                                        Industrial Safety and Hazard Management (5321)
                                     </option>
-                                    <option value="M.E - Welding Technology (2019)">M.E - Welding Technology (2019)
+                                    <option value="M.Tech.- Chemical Engineering (5001)">M.Tech.- Chemical
+                                        Engineering (5001)
                                     </option>
-
+                                    <option value="M.Tech.- Leather Technology (5014)">M.Tech.- Leather Technology
+                                        (5014)
+                                    </option>
+                                    <option value="M.Tech.- Textile Technology (5011)">M.Tech.- Textile Technology
+                                        (5011)
+                                    </option>
+                                    <option value="M.Tech.- Ceramic Technology (5002)">M.Tech.- Ceramic Technology
+                                        (5002)
+                                    </option>
+                                    <option value="M.Tech.- Petroleum Refining & Petro Chemicals (5003)">M.Tech.-
+                                        Petroleum Refining & Petro Chemicals (5003)
+                                    </option>
+                                    <option value="M.Tech.- Footwear Engineering &Management (5015)">M.Tech.- Footwear
+                                        Engineering &Management (5015)
+                                    </option>
                                 </select>
                                 <div *ngIf="submitted && f.course.errors" class="invalid-feedback">
                                     <div *ngIf="f.course.errors.required">Course is required</div>
@@ -393,10 +410,10 @@
                         <tr>
                             <td id="detail-name" class="pt-2"></td>
                             <td id="detail-gama" class="pt-3">
-                                <button class="btn btn-primary m-3" routerLink="/gce-salem">Back</button>
+                                <button class="btn btn-primary m-3" routerLink="/act-chennai">Back</button>
                                 <button class="btn btn-secondary m-3" type="reset" (click)="onReset()">Feed</button>
                                 <button class="btn btn-primary m-3">Feed Next</button>
-                                <button class="btn btn-secondary m-3" routerLink="/viewform">Generate</button>
+                                <button class="btn btn-secondary m-3" (click)="nextpage()">Generate</button>
                             </td>
                         </tr>
 
