@@ -1,6 +1,7 @@
 import { HttpClient } from '@angular/common/http';
 import { Component, OnInit } from '@angular/core';
 import { FormBuilder, FormGroup, Validators } from '@angular/forms';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-act-chennai-details',
@@ -8,6 +9,7 @@ import { FormBuilder, FormGroup, Validators } from '@angular/forms';
   styleUrls: ['./act-chennai-details.component.css']
 })
 export class ActChennaiDetailsComponent implements OnInit {
+
   current_sem1 = false
   history_of_arrear = false
   lackattendance = false
@@ -19,8 +21,9 @@ export class ActChennaiDetailsComponent implements OnInit {
   Last = false
 
   submitted = true;
+  // formBuilder: any;
 
-  constructor(private formBuilder: FormBuilder, private http: HttpClient) { }
+  constructor(private formBuilder: FormBuilder, private http: HttpClient, private router: Router) { }
 
   registerForm: any = FormGroup;
 
@@ -36,6 +39,9 @@ export class ActChennaiDetailsComponent implements OnInit {
       community_student: ['', Validators.required],
       mode: ['', Validators.required],
       score: ['', [Validators.required, Validators.pattern('[0-9]*')]],
+      arrear: [''],
+      attendance: [''],
+      remark: [''],
       stipend: ['', Validators.required],
       transition: [''],
       date: [''],
@@ -44,10 +50,6 @@ export class ActChennaiDetailsComponent implements OnInit {
       ifsc: ['', Validators.required],
       phonenumber: [null, [Validators.required, Validators.pattern('[0-9]*')]],
       email: [null, [Validators.required, Validators.email]],
-
-      arrear: [''],
-      attendance: [''],
-      remark: ['']
     });
   }
 
@@ -117,10 +119,10 @@ export class ActChennaiDetailsComponent implements OnInit {
   }
 
   stipend_eligible(f: any) {
-    if (f.target.value == "Yes") {
+    if (f.target.value == "Paid") {
       this.eligible = true
     }
-    if (f.target.value == "No") {
+    if (f.target.value == "Unpaid") {
       this.eligible = false
     }
   }
@@ -130,8 +132,13 @@ export class ActChennaiDetailsComponent implements OnInit {
     this.registerForm.reset();
   }
 
+  back() {
+    this.router.navigate(['gce-salem'])
+  }
+
   generate() {
-    this.Last = true;
+    // this.Last = true;
+    this.router.navigateByUrl('viewform');
   }
 
   toggle() {

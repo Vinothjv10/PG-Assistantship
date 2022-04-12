@@ -21,15 +21,18 @@ const routes: Routes = [
   },
   // { path: '**', component: LoginComponent },
   { path: 'gce-salem', component: GceSalemComponent },
-  { path: 'viewform', component: GceSalemViewformComponent },
+  { path: 'gce-viewform', component: GceSalemViewformComponent },
   {
     path: 'gce-salem-details',
     children: [
       { path: '', component: GceSalemDetailsComponent },
     ]
   },
+
+
+  { path: 'act-chennai', component: ActChennaiComponent },
   {
-    path: 'act-chennai', component: ActChennaiDetailsComponent,
+    path: 'act-chennai-details', component: ActChennaiDetailsComponent,
     children: [
       {
         path: 'act-chennai-form', component: ActChennaiViewformComponent

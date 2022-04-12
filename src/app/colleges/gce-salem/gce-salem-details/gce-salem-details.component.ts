@@ -118,10 +118,10 @@ export class GceSalemDetailsComponent implements OnInit {
   }
 
   stipend_eligible(f: any) {
-    if (f.target.value == "Yes") {
+    if (f.target.value == "Paid") {
       this.eligible = true
     }
-    if (f.target.value == "No") {
+    if (f.target.value == "Unpaid") {
       this.eligible = false
     }
   }
@@ -129,6 +129,10 @@ export class GceSalemDetailsComponent implements OnInit {
   onReset() {
     this.submitted = false;
     this.registerForm.reset();
+  }
+
+  back() {
+    this.router.navigate(['gce-salem'])
   }
 
   generate() {

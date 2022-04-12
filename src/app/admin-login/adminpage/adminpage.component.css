@@ -22,6 +22,10 @@
     border-color: #eee
 }
 
+#bars {
+    margin-right: 50px;
+}
+
 .rows {
     width: inherit;
     height: inherit;

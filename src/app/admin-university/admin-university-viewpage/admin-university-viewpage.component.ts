@@ -35,6 +35,8 @@ export interface data {
 })
 export class AdminUniversityViewpageComponent implements OnInit {
 
+  filteredString: string = ''
+
   fileName = 'ExcelSheet.xlsx';
 
   datas: data[] = []
